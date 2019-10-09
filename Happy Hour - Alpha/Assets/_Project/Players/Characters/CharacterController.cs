@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Project
 {
@@ -7,6 +8,7 @@ namespace Project
     {
         #region ------------------------------dependencies
         [SerializeField] CharacterSettings _settings;
+        [Inject] Round _round;
         #endregion
 
         #region ------------------------------interface
@@ -40,6 +42,8 @@ namespace Project
         {
             throw new System.NotImplementedException();
         }
+
+        public int PlayerId { get; set; }
 
         public Sprite Sprite
         {

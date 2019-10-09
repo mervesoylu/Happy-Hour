@@ -24,8 +24,9 @@ namespace Project
             for (int i = 0; i < _players.Count; i++)
             {
                 _characters[i].GetComponent<CharacterInput>().SetXBoxController(_players[i].Controller);
+                _characters[i].GetComponent<CharacterController>().PlayerId = (int)_players[i].Controller;
                 _players[i].Sprite = _characters[i].GetComponent<CharacterController>().Sprite;
-                //_players[i].Score = 0;
+                _players[i].Score = 0;
             }
 
             _boardController.Show(_players);
