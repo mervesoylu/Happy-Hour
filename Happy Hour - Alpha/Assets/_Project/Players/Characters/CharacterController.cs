@@ -9,17 +9,31 @@ namespace Project
         #region ------------------------------dependencies
         [SerializeField] CharacterSettings _settings;
         [Inject] Round _round;
+
+        Rigidbody _rigidbody;
+        Transform _transform;
         #endregion
 
         #region ------------------------------interface
         public void Move(Vector3 direction)
         {
-            throw new System.NotImplementedException();
+            if (_isStunned)
+            { return; }
+
+            Vector3 velocity = direction * _settings.MovementSettings.Speed;
+            _rigidbody.velocity = velocity;
+
+            if (velocity != Vector3.zero)
+            {
+                _facingDirection = velocity.normalized;
+                Orientate(_facingDirection);
+            }
         }
 
         public void Aim(Vector3 direction)
         {
-            throw new System.NotImplementedException();
+            if (direction != Vector3.zero)
+            { _aimDirection = direction; }
         }
 
         public void Throw()
@@ -34,27 +48,50 @@ namespace Project
 
         public void TakeDamage()
         {
-            throw new System.NotImplementedException();
+            if (_hitpoints > 0)
+            {
+                _hitpoints--;
+                Debug.Log(string.Format("{0} took damage, {0} is now at {1} hitpoints!", gameObject.name, _hitpoints));
+            }
         }
-        int _hp;
 
         public void GetStunned()
         {
-            throw new System.NotImplementedException();
+            _isStunned = true;
+            _rigidbody.velocity = Vector3.zero;
+            Invoke(nameof(RemoveStun), _settings.MovementSettings.StunDuration);
         }
 
-        public int PlayerId { get; set; }
-
+        public int PlayerID { get; set; }
         public Sprite Sprite
         {
-            get { return _settings.Sprite; }
+            get { return null; }
         }
         #endregion
 
         #region ------------------------------Unity messages
+        private void Awake()
+        {
+            _rigidbody = GetComponent<Rigidbody>();
+            _transform = transform;
+        }
         #endregion
 
         #region ------------------------------details
+        private void Orientate(Vector2 direction)
+        {
+            _rigidbody.MoveRotation(Quaternion.LookRotation(direction, _transform.up));
+        }
+
+        void RemoveStun()
+        {
+            _isStunned = false;
+        }
+
+        int _hitpoints;
+        Vector3 _aimDirection = Vector3.forward;
+        Vector3 _facingDirection = Vector3.forward;
+        bool _isStunned = false;
         #endregion
     }
 }
