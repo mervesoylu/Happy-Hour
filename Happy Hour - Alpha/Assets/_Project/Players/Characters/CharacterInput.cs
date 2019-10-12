@@ -45,9 +45,9 @@ namespace Project
             // Need to run the direction through a filter before passing it to the character controller.
             _characterController.Aim(_aimDirection);
 
-            if (XCI.GetButtonDown(XboxButton.RightBumper) || Input.GetMouseButtonDown(0))
+            if (XCI.GetButtonDown(XboxButton.RightBumper, _controller))
             { _characterController.Throw(); }
-            else if (XCI.GetButtonDown(XboxButton.LeftBumper) || Input.GetMouseButtonDown(1))
+            else if (XCI.GetButtonDown(XboxButton.LeftBumper, _controller))
             { _characterController.Toss(); }
         }
 #endregion
