@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 3760790523250805240}
   m_Layer: 0
   m_Name: Character 1
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settings:
     MovementSettings: {fileID: 11400000, guid: 40a1ab5b16a306446b91d15d41fcb3bf, type: 2}
+    StraightBottle: {fileID: 6753276746239517203, guid: 9d2a42145cc82af428a7a7d8da4f0031,
+      type: 3}
     Sprite: {fileID: 21300000, guid: 516724d57359e9c46afdae313d6cbce4, type: 3}
+  _colliders:
+  - {fileID: 6143464099307464197}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0

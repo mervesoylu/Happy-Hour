@@ -6,6 +6,7 @@ namespace Project
     public class CharacterSettings
     {
         public MovementSettings MovementSettings;
+        public StraightBottle StraightBottle;
         public Sprite Sprite;
     }
 }

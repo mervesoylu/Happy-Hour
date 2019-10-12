@@ -38,7 +38,8 @@ namespace Project
 
         public void Throw()
         {
-            throw new System.NotImplementedException();
+            StraightBottle bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity, _transform);
+            bottle.Throw(_aimDirection, _colliders);
         }
 
         public void Toss()
@@ -74,6 +75,8 @@ namespace Project
         {
             _rigidbody = GetComponent<Rigidbody>();
             _transform = transform;
+
+            _colliders = new List<Collider>(GetComponentsInChildren<Collider>(false));
         }
         #endregion
 
@@ -88,10 +91,11 @@ namespace Project
             _isStunned = false;
         }
 
-        int _hitpoints;
         Vector3 _aimDirection = Vector3.forward;
         Vector3 _facingDirection = Vector3.forward;
         bool _isStunned = false;
+        int _hitpoints;
+        List<Collider> _colliders;
         #endregion
     }
 }
