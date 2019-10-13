@@ -36,9 +36,14 @@ namespace Project
             { _aimDirection = direction; }
         }
 
+        public void SetSpeed(float speed)
+        {
+            _settings.MovementSettings.Speed = speed;
+        }
+
         public void Throw()
         {
-            StraightBottle bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity, _transform);
+            StraightBottle bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity);
             bottle.Throw(_aimDirection, _colliders);
         }
 
@@ -81,11 +86,10 @@ namespace Project
         #endregion
 
         #region ------------------------------details
-        private void Orientate(Vector2 direction)
+        private void Orientate(Vector3 direction)
         {
-            float angle = Mathf.Atan2(direction.y, direction.x) - 90f;
-
-            transform.rotation = Quaternion.Euler(Vector3.up * angle);
+            float angle = Mathf.Atan2(direction.x, direction.z);
+            transform.rotation = Quaternion.Euler(Vector3.up * Mathf.Rad2Deg * angle);
         }
 
         void RemoveStun()
