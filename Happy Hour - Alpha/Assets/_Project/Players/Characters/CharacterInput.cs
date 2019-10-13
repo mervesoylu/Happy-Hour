@@ -17,15 +17,25 @@ namespace Project
         {
             _controller = controller;
         }
+
+        public void OnHappyHourRan()
+        {
+            //_characterController.
+        }
+
+        public void OnHappyHourStopped()
+        {
+
+        }
         #endregion
 
         #region ------------------------------Unity messages
-        private void Awake()
+        void Awake()
         {
             _characterController = GetComponent<CharacterController>();
         }
 
-        private void Update()
+        void Update()
         {
 #if KEYBOARD
             _forwardDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
@@ -50,12 +60,13 @@ namespace Project
             else if (XCI.GetButtonDown(XboxButton.LeftBumper, _controller))
             { _characterController.Toss(); }
         }
-#endregion
+        #endregion
 
-#region ------------------------------details
+        #region ------------------------------details
         [SerializeField] XboxController _controller;
+        CharacterInputState _state;
         Vector3 _forwardDirection;
         Vector3 _aimDirection;
-#endregion
+        #endregion
     }
 }

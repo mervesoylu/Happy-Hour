@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Player 1
   m_EditorClassIdentifier: 
   Controller: 1
-  Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  CharacterPrefab: {fileID: 0}
-  Score: 0
+  Sprite: {fileID: 21300000, guid: d5f038abc40e2bd4c9a99a11c28d9df9, type: 3}
+  Score: 4

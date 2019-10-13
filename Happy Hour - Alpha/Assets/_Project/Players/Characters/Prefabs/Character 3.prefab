@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settings:
-    MovementSettings: {fileID: 11400000, guid: 40a1ab5b16a306446b91d15d41fcb3bf, type: 2}
+    Speed: 10
+    StunDuration: 2
     StraightBottle: {fileID: 6753276746239517203, guid: 4fa35c5f5148bed4d8d9fd7e02934056,
       type: 3}
     Sprite: {fileID: 21300000, guid: f29902806092bc94b947c6566d44895a, type: 3}

@@ -791,6 +791,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1565492985508346208, guid: bb579cb9665aa9142a8b72f374a4635a,
+        type: 3}
+      propertyPath: _settings.Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565492985508346208, guid: bb579cb9665aa9142a8b72f374a4635a,
+        type: 3}
+      propertyPath: _settings.StunDuration
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb579cb9665aa9142a8b72f374a4635a, type: 3}
 --- !u!1 &109091913 stripped
@@ -1454,6 +1464,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021858509020369211, guid: 40cc3816e25317a45b45f280cdd167a7,
+        type: 3}
+      propertyPath: _settings.Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021858509020369211, guid: 40cc3816e25317a45b45f280cdd167a7,
+        type: 3}
+      propertyPath: _settings.StunDuration
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cc3816e25317a45b45f280cdd167a7, type: 3}
@@ -3149,6 +3169,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545160086925639470, guid: b6a1f2c775ba5e743ac6ef86cfcf6086,
+        type: 3}
+      propertyPath: _settings.Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545160086925639470, guid: b6a1f2c775ba5e743ac6ef86cfcf6086,
+        type: 3}
+      propertyPath: _settings.StunDuration
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a1f2c775ba5e743ac6ef86cfcf6086, type: 3}
@@ -6529,6 +6559,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174565053185135282, guid: d2e1c063c4050954eb637655f87f1101,
+        type: 3}
+      propertyPath: _settings.Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 174565053185135282, guid: d2e1c063c4050954eb637655f87f1101,
+        type: 3}
+      propertyPath: _settings.StunDuration
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2e1c063c4050954eb637655f87f1101, type: 3}

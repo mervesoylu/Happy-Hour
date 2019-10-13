@@ -20,7 +20,7 @@ namespace Project
             if (_isStunned)
             { return; }
 
-            Vector3 velocity = direction * _settings.MovementSettings.Speed;
+            Vector3 velocity = direction * _settings.Speed;
             _rigidbody.velocity = velocity;
 
             if (velocity != Vector3.zero)
@@ -38,7 +38,7 @@ namespace Project
 
         public void SetSpeed(float speed)
         {
-            _settings.MovementSettings.Speed = speed;
+            _settings.Speed = speed;
         }
 
         public void Throw()
@@ -65,7 +65,7 @@ namespace Project
         {
             _isStunned = true;
             _rigidbody.velocity = Vector3.zero;
-            Invoke(nameof(RemoveStun), _settings.MovementSettings.StunDuration);
+            Invoke(nameof(RemoveStun), _settings.StunDuration);
         }
 
         public int PlayerID { get; set; }
