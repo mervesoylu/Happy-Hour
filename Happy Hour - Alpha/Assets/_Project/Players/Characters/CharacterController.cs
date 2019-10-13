@@ -66,7 +66,7 @@ namespace Project
         public int PlayerID { get; set; }
         public Sprite Sprite
         {
-            get { return null; }
+            get { return _settings.Sprite; }
         }
         #endregion
 
@@ -83,7 +83,9 @@ namespace Project
         #region ------------------------------details
         private void Orientate(Vector2 direction)
         {
-            _rigidbody.MoveRotation(Quaternion.LookRotation(direction, _transform.up));
+            float angle = Mathf.Atan2(direction.y, direction.x) - 90f;
+
+            transform.rotation = Quaternion.Euler(Vector3.up * angle);
         }
 
         void RemoveStun()
