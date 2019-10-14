@@ -18,22 +18,23 @@ namespace Project
         public void Move(Vector3 direction)
         {
             if (_isStunned)
-            { return; }
+                return;
 
-            Vector3 velocity = direction * _settings.Speed;
+            var velocity = direction * _settings.Speed;
             _rigidbody.velocity = velocity;
-
-            if (velocity != Vector3.zero)
-            {
-                _facingDirection = velocity.normalized;
-                Orientate(_facingDirection);
-            }
         }
 
         public void Aim(Vector3 direction)
         {
-            if (direction != Vector3.zero)
-            { _aimDirection = direction; }
+            if (_isStunned)
+                return;
+
+            if (direction == Vector3.zero)
+                return;
+
+            _facing = direction;
+
+            _rigidbody.MoveRotation(Quaternion.LookRotation(_facing, _transform.up));
         }
 
         public void SetSpeed(float speed)
@@ -43,29 +44,34 @@ namespace Project
 
         public void Throw()
         {
-            StraightBottle bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity);
-            bottle.Throw(_aimDirection, _colliders);
+            StraightBottleController bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity);
+            bottle.Fly(_facing, _colliders);
         }
 
         public void Toss()
         {
-            throw new System.NotImplementedException();
+            if (_isStunned)
+                return;
+
+            var bottle = Instantiate(_settings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
+            bottle.Fly(_facing, _colliders);
         }
 
         public void TakeDamage()
         {
-            if (_hitpoints > 0)
-            {
-                _hitpoints--;
-                Debug.Log(string.Format("{0} took damage, {0} is now at {1} hitpoints!", gameObject.name, _hitpoints));
-            }
-        }
+            if (_hp > 0)
+                _hp--;
 
+            if (_hp <= 0)
+                die();
+
+            print(gameObject.name + ": " + _hp);
+        }
         public void GetStunned()
         {
             _isStunned = true;
             _rigidbody.velocity = Vector3.zero;
-            Invoke(nameof(RemoveStun), _settings.StunDuration);
+            Invoke(nameof(removeStun), _settings.StunDuration);
         }
 
         public int PlayerID { get; set; }
@@ -76,32 +82,37 @@ namespace Project
         #endregion
 
         #region ------------------------------Unity messages
-        private void Awake()
+        void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
             _transform = transform;
 
             _colliders = new List<Collider>(GetComponentsInChildren<Collider>(false));
         }
+
+        void Start()
+        {
+            _hp = 4;
+            _facing = _transform.forward;
+        }
         #endregion
 
         #region ------------------------------details
-        private void Orientate(Vector3 direction)
-        {
-            float angle = Mathf.Atan2(direction.x, direction.z);
-            transform.rotation = Quaternion.Euler(Vector3.up * Mathf.Rad2Deg * angle);
-        }
+        bool _isStunned;
+        Vector3 _facing;
+        int _hp;
+        List<Collider> _colliders;
 
-        void RemoveStun()
+        void removeStun()
         {
             _isStunned = false;
         }
 
-        Vector3 _aimDirection = Vector3.forward;
-        Vector3 _facingDirection = Vector3.forward;
-        bool _isStunned = false;
-        int _hitpoints;
-        List<Collider> _colliders;
+        void die()
+        {
+            print("die");
+            gameObject.SetActive(false);
+        }
         #endregion
     }
 }

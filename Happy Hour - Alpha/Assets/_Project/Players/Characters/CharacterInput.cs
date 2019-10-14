@@ -38,35 +38,50 @@ namespace Project
         void Update()
         {
 #if KEYBOARD
-            _forwardDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+            _moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
 #else
-            _forwardDirection = new Vector3(XCI.GetAxis(XboxAxis.LeftStickX, _controller), 0, XCI.GetAxis(XboxAxis.LeftStickY, _controller));
+            _moveDirection = new Vector3(XCI.GetAxis(XboxAxis.LeftStickX, _controller), 0, XCI.GetAxis(XboxAxis.LeftStickY, _controller));
 #endif
             // Need to run the direction through a filter before passing it to the character controller.
-            _characterController.Move(_forwardDirection);
+            _characterController.Move(_moveDirection);
 
 #if KEYBOARD
             _aimDirection = _forwardDirection;
 #else
-            Vector3 bufferedAimDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.RightStickX), 0f, XCI.GetAxisRaw(XboxAxis.RightStickY));
-            if (bufferedAimDirection != Vector3.zero)
-            { _aimDirection = bufferedAimDirection; }
-#endif
-            // Need to run the direction through a filter before passing it to the character controller.
-            _characterController.Aim(_aimDirection);
+            if (XCI.GetAxis(XboxAxis.RightStickX, _controller) != 0 || XCI.GetAxis(XboxAxis.RightStickY, _controller) != 0)
+                _aimDirection = new Vector3(XCI.GetAxis(XboxAxis.RightStickX, _controller), 0, XCI.GetAxis(XboxAxis.RightStickY, _controller));
 
-            if (XCI.GetButtonDown(XboxButton.RightBumper, _controller))
-            { _characterController.Throw(); }
-            else if (XCI.GetButtonDown(XboxButton.LeftBumper, _controller))
-            { _characterController.Toss(); }
+            _characterController.Aim(_aimDirection.normalized);
+#endif
+
+            if (XCI.GetButton(XboxButton.RightBumper, _controller) && _straightCoolDownTimer <= 0)
+            {
+                _straightCoolDownTimer = _straightCoolDown;
+                _characterController.Throw();
+            }
+            else if (XCI.GetButton(XboxButton.LeftBumper, _controller) && _arcCoolDownTimer <= 0)
+            {
+                _arcCoolDownTimer = _arcCoolDown;
+                _characterController.Toss();
+            }
+
+            if (_straightCoolDown > 0)
+                _straightCoolDownTimer -= Time.deltaTime;
+
+            if (_arcCoolDown > 0)
+                _arcCoolDownTimer -= Time.deltaTime;
         }
+        Vector3 _aimDirection;
         #endregion
 
         #region ------------------------------details
         [SerializeField] XboxController _controller;
+        [SerializeField] float _straightCoolDown;
+        float _straightCoolDownTimer;
+        [SerializeField] float _arcCoolDown;
+        float _arcCoolDownTimer;
         CharacterInputState _state;
-        Vector3 _forwardDirection;
-        Vector3 _aimDirection;
+        Vector3 _moveDirection;
         #endregion
     }
 }

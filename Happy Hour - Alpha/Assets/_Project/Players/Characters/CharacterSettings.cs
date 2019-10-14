@@ -7,7 +7,8 @@ namespace Project
     {
         public float Speed;
         public float StunDuration;
-        public StraightBottle StraightBottle;
+        public StraightBottleController StraightBottle;
+        public ArcBottleController ArcBottle;
         public Sprite Sprite;
     }
 }
