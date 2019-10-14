@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4601357222746445613}
   - component: {fileID: 4601357222746445612}
   - component: {fileID: 4601357222746445615}
-  - component: {fileID: 4601357222746445614}
   m_Layer: 0
   m_Name: Desert
   m_TagString: Untagged
@@ -27,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4601357222746445584}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -500, y: -1, z: 958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -302,17 +301,3 @@ MonoBehaviour:
   - a: 3
     b: 2
   m_SelectedVertices: 00000000010000000200000003000000
---- !u!64 &4601357222746445614
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4601357222746445584}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
