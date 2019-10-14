@@ -44,6 +44,9 @@ namespace Project
 
         public void Throw()
         {
+            if (_isStunned)
+                return;
+
             StraightBottleController bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity);
             bottle.Fly(_facing, _colliders);
         }
@@ -75,9 +78,16 @@ namespace Project
         }
 
         public int PlayerID { get; set; }
+
         public Sprite Sprite
         {
             get { return _settings.Sprite; }
+        }
+
+        public void Restart()
+        {
+            _hp = 4;
+            gameObject.SetActive(true);
         }
         #endregion
 
@@ -112,6 +122,7 @@ namespace Project
         {
             print("die");
             gameObject.SetActive(false);
+            _round.OnPlayerDied(PlayerID);
         }
         #endregion
     }

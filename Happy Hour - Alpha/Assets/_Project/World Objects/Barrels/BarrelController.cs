@@ -24,10 +24,11 @@ public class BarrelController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Floor"))
+            return;
+
         if (other.CompareTag("Character"))
-        {
             other.GetComponent<Project.CharacterController>().TakeDamage();
-        }
 
         Destroy(gameObject);
     }

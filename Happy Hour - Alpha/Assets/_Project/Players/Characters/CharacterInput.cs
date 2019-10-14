@@ -71,11 +71,11 @@ namespace Project
             if (_arcCoolDown > 0)
                 _arcCoolDownTimer -= Time.deltaTime;
         }
+        [SerializeField] XboxController _controller;
         Vector3 _aimDirection;
         #endregion
 
         #region ------------------------------details
-        [SerializeField] XboxController _controller;
         [SerializeField] float _straightCoolDown;
         float _straightCoolDownTimer;
         [SerializeField] float _arcCoolDown;

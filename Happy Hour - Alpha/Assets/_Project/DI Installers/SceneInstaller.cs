@@ -10,13 +10,13 @@ namespace Project
         [SerializeField] List<GameObject> _characters;
         [SerializeField] List<Transform> _spawnPoints;
         [SerializeField] GameObject _boardUIPrefab;
+        [SerializeField] Round _round;
 
         public override void InstallBindings()
         {
-            Container.BindInstances(_players, _characters, _spawnPoints);
+            Container.BindInstances(_players, _characters, _spawnPoints, _round);
             Container.Bind<BoardController>().FromComponentInNewPrefab(_boardUIPrefab).AsSingle();
             Container.BindInterfacesAndSelfTo<Game>().AsSingle();
-            Container.Bind<Round>().FromNew().AsSingle();
         }
     } 
 }
