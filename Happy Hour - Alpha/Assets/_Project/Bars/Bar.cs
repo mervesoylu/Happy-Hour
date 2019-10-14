@@ -27,6 +27,12 @@ public class Bar : MonoBehaviour
     {
         _transform = transform;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        { SpawnBarrel(); }
+    }
     #endregion
 
     #region --------------------------details

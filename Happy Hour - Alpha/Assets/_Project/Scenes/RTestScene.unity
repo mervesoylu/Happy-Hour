@@ -277,13 +277,13 @@ GameObject:
   - component: {fileID: 956825642}
   m_Layer: 10
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &956825642
-MeshCollider:
+--- !u!65 &956825642
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -292,10 +292,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.002, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &956825643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -496,35 +495,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8410778114912870002, guid: 1a91c3e0f0c789a4892a77e3accae555, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a91c3e0f0c789a4892a77e3accae555, type: 3}
---- !u!1 &1976310716 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8934800546355736668, guid: 1a91c3e0f0c789a4892a77e3accae555,
-    type: 3}
-  m_PrefabInstance: {fileID: 1976310715}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1976310717 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 997547436905482682, guid: 1a91c3e0f0c789a4892a77e3accae555,
-    type: 3}
-  m_PrefabInstance: {fileID: 1976310715}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1976310718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976310716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ef4ee56bcddb641ad6a5b04bca620f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _barrelPrefab: {fileID: 5953879595591610682, guid: 4d09c3f2eeddfd74fbba62badbf33ab4,
-    type: 3}
-  _barOrigin: {fileID: 1976310717}
-  _barRadius: 4
-  _barHatches: 8

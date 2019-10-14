@@ -23,12 +23,12 @@ public class ArcBottleController : MonoBehaviour
         _transform = transform;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (_ownerColliders.Contains(other))
+        if (_ownerColliders.Contains(other.collider))
             return;
 
-        if (other.gameObject.tag == "Floor")
+        if (other.collider.gameObject.tag == "Floor")
         {
             Instantiate(_spillPrefab, _transform.position, Quaternion.identity);
             StopCoroutine(nameof(flyOverTime));
