@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Project
 {
-    public class StraightBottle : MonoBehaviour
+    public class StraightBottleController : MonoBehaviour
     {
         #region ------------------------------dependencies
         Rigidbody _rigidbody;
@@ -11,7 +11,7 @@ namespace Project
         #endregion
 
         #region ------------------------------interfaces
-        public void Throw(Vector3 direction, List<Collider> ownerColliders)
+        public void Fly(Vector3 direction, List<Collider> ownerColliders)
         {
             _ownerColliders = ownerColliders;
             _rigidbody.AddForce(direction * _speed, ForceMode.Impulse);
