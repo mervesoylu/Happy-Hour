@@ -49,7 +49,7 @@ namespace Project
             _aimDirection = _forwardDirection;
 #else
             if (XCI.GetAxis(XboxAxis.RightStickX, _controller) != 0 || XCI.GetAxis(XboxAxis.RightStickY, _controller) != 0)
-                _aimDirection = new Vector3(XCI.GetAxis(XboxAxis.RightStickX, _controller), 0, XCI.GetAxis(XboxAxis.RightStickY, _controller));
+                _aimDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.RightStickX, _controller), 0, XCI.GetAxisRaw(XboxAxis.RightStickY, _controller));
 
             _characterController.Aim(_aimDirection.normalized);
 #endif
