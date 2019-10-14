@@ -23,12 +23,12 @@ public class ArcBottleController : MonoBehaviour
         _transform = transform;
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (_ownerColliders.Contains(other.collider))
+        if (_ownerColliders.Contains(other))
             return;
 
-        if (other.collider.gameObject.tag == "Floor")
+        if (other.gameObject.tag == "Floor")
         {
             Instantiate(_spillPrefab, _transform.position, Quaternion.identity);
             StopCoroutine(nameof(flyOverTime));
@@ -42,7 +42,7 @@ public class ArcBottleController : MonoBehaviour
     {
         Vector3 startPos = _transform.position;
         Vector3 endPos = startPos + direction * _arcSize.x;
-        endPos.y = -0.1f; // to make sure bottle reaches the ground
+        endPos.y = 1f; // to make sure bottle reaches the ground
         float trajectoryHeight = _arcSize.y;
         var startTime = Time.time;
 
