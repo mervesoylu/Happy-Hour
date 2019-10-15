@@ -43,7 +43,7 @@ namespace Project
                 return;
 
             StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
-            bottle.Fly(_facing, _colliders);
+            bottle.Fly(deviateDirection(_facing), _colliders);
         }
 
         public void Toss()
@@ -126,6 +126,15 @@ namespace Project
             print("die");
             gameObject.SetActive(false);
             _round.OnPlayerDied(PlayerID);
+        }
+        Vector3 deviateDirection(Vector3 direction)
+        {
+            Vector3 result;
+
+            float randomAngle = Random.Range(-_currentSettings.MaxDeviationAmount, _currentSettings.MaxDeviationAmount);
+            result = Quaternion.AngleAxis(randomAngle, Vector3.up) * direction;
+
+            return result;
         }
         #endregion
     }

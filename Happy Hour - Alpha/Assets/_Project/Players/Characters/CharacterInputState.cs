@@ -75,23 +75,13 @@ namespace Project
         public override void Update(XboxController controller)
         {
             // aim
-            Vector3 aimDirection = _characterController.transform.forward;
+            Vector3 aimDirection = Vector3.zero;
             if (XCI.GetAxis(XboxAxis.RightStickX, controller) != 0 || XCI.GetAxis(XboxAxis.RightStickY, controller) != 0)
                 aimDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.RightStickX, controller), 0, XCI.GetAxisRaw(XboxAxis.RightStickY, controller));
 
-            _characterController.Aim(deviateDirection(aimDirection.normalized));
+            _characterController.Aim(aimDirection.normalized);
 
             base.Update(controller);
-        }
-
-        Vector3 deviateDirection(Vector3 direction)
-        {
-            Vector3 result;
-
-            float randomAngle = Random.Range(-_settings.MaxDeviationAmount, _settings.MaxDeviationAmount);
-            result = Quaternion.AngleAxis(randomAngle, Vector3.up) * direction;
-
-            return result;
         }
     }
 }
