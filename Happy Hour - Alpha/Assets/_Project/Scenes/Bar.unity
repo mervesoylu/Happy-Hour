@@ -2750,6 +2750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bar: {fileID: 1723466034}
   _barrelSpawnInterval: 1
+  _numberOfBarrelsToInitiateHappuHour: 3
+  _happyHourDuration: 5
 --- !u!1001 &724207798
 PrefabInstance:
   m_ObjectHideFlags: 0

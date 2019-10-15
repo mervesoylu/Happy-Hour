@@ -34,8 +34,7 @@ namespace Project
                 return;
 
             _facing = direction;
-            orientate(_facing);
-            //_rigidbody.MoveRotation(Quaternion.LookRotation(_facing, _transform.up));
+            _rigidbody.MoveRotation(Quaternion.LookRotation(_facing, _transform.up));
         }
 
         public void Throw()
@@ -116,12 +115,6 @@ namespace Project
         Vector3 _facing;
         int _hp;
         List<Collider> _colliders;
-
-        void orientate(Vector3 direction)
-        {
-            float angle = Mathf.Rad2Deg * Mathf.Atan2(direction.x, direction.z);
-            _transform.rotation = Quaternion.Euler(Vector3.up * angle);
-        }
 
         void removeStun()
         {
