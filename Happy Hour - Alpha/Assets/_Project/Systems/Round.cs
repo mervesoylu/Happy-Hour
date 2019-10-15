@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using Zenject;
 
 namespace Project
@@ -12,6 +13,7 @@ namespace Project
         [Inject] List<Transform> _spawnPoints;
         [SerializeField] Bar _bar;
         List<CharacterController> _characters;
+        [SerializeField] TextMeshProUGUI _happyHourTextUI;
         #endregion
 
         #region ------------------------------interface
@@ -52,6 +54,13 @@ namespace Project
         }
         #endregion
 
+        #region ------------------------------Unity messages
+        void Start()
+        {
+            _happyHourTextUI.gameObject.SetActive(false);
+        }
+        #endregion
+
         #region ------------------------------details
         IEnumerator spawnBarrelTracker()
         {
@@ -84,6 +93,8 @@ namespace Project
 
         void runHappyHour()
         {
+            _happyHourTextUI.gameObject.SetActive(true);
+
             foreach (var character in _characters)
             {
                 character.OnHappyHourRan();
@@ -93,6 +104,8 @@ namespace Project
 
         void stopHappyHour()
         {
+            _happyHourTextUI.gameObject.SetActive(false);
+
             foreach (var character in _characters)
             {
                 character.OnHappyHourStopped();
