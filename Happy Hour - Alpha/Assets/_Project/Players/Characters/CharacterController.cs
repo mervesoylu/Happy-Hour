@@ -84,12 +84,12 @@ namespace Project
         }
         public void OnHappyHourRan()
         {
-            throw new System.NotImplementedException();
+            _currentSettings = _happyHourSettings;
         }
 
         public void OnHappyHourStopped()
         {
-            throw new System.NotImplementedException();
+            _currentSettings = _defaultSettings;
         }
         #endregion
 
@@ -106,6 +106,7 @@ namespace Project
         {
             _hp = 4;
             _facing = _transform.forward;
+            _currentSettings = _defaultSettings;
         }
         #endregion
 

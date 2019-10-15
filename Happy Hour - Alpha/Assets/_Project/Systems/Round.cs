@@ -55,17 +55,49 @@ namespace Project
         #region ------------------------------details
         IEnumerator spawnBarrelTracker()
         {
+            _spawnedBarrelsCounter = 0;
+
             while (true)
             {
                 yield return new WaitForSeconds(_barrelSpawnInterval);
-                _bar.SpawnBarrel();
+                spawnBarrel();
+                if (_spawnedBarrelsCounter == _numberOfBarrelsToInitiateHappuHour)
+                {
+                    _spawnedBarrelsCounter = 0;
+                    runHappyHour();
+                    yield return new WaitForSeconds(_happyHourDuration);
+                    stopHappyHour();
+                }
             }
         }
+
+        private void spawnBarrel()
+        {
+            _bar.SpawnBarrel();
+            _spawnedBarrelsCounter++;
+        }
+
         [SerializeField] float _barrelSpawnInterval;
+        [SerializeField] int _numberOfBarrelsToInitiateHappuHour;
+        [SerializeField] float _happyHourDuration;
+        int _spawnedBarrelsCounter;
 
         void runHappyHour()
         {
-            throw new System.NotImplementedException();
+            foreach (var character in _characters)
+            {
+                character.OnHappyHourRan();
+                character.GetComponent<CharacterInput>().OnHappyHourRan();
+            }
+        }
+
+        void stopHappyHour()
+        {
+            foreach (var character in _characters)
+            {
+                character.OnHappyHourStopped();
+                character.GetComponent<CharacterInput>().OnHappyHourStopped();
+            }
         }
 
         void finishRound()
