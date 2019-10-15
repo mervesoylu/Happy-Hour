@@ -29,10 +29,16 @@ public class PauseMenuController : MonoBehaviour
         _pauseMenuCanvas.gameObject.SetActive(false);
     }
 
+    void goToMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
     void OnEnable()
     {
         _resumeButton.onClick.AddListener(resumeGame);
-        _mainMenuButton.onClick.AddListener(() => SceneManager.LoadScene(0));
+        _mainMenuButton.onClick.AddListener(goToMainMenu);
         _pauseMenuCanvas.gameObject.SetActive(false);
     }
 
