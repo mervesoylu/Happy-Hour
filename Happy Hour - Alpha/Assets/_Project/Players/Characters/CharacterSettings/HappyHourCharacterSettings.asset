@@ -18,6 +18,6 @@ MonoBehaviour:
     type: 3}
   ArcBottle: {fileID: 9152733204380273351, guid: c894b9fee4efd624290d4e7ff6e909e5,
     type: 3}
-  StraightCoolDown: 1
-  ArcCoolDown: 2
+  StraightCoolDown: 0.2
+  ArcCoolDown: 1
   MaxDeviationAmount: 10
