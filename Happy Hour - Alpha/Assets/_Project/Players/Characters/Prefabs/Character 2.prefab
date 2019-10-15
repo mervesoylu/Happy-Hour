@@ -170,14 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42240724c7bc4445af8e4f6315675e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _settings:
-    Speed: 8
-    StunDuration: 2
-    StraightBottle: {fileID: 6753276746239517203, guid: 4fa35c5f5148bed4d8d9fd7e02934056,
-      type: 3}
-    ArcBottle: {fileID: 9152733204380273351, guid: c894b9fee4efd624290d4e7ff6e909e5,
-      type: 3}
-    Sprite: {fileID: 21300000, guid: 1c98060984f932445b0e3e3e51ffd54f, type: 3}
+  Sprite: {fileID: 21300000, guid: 1c98060984f932445b0e3e3e51ffd54f, type: 3}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,9 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e6de02af3e4174898ce53e1f4353c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: 2
-  _straightCoolDown: 1
-  _arcCoolDown: 1
 --- !u!1 &7375348778223614055
 GameObject:
   m_ObjectHideFlags: 0

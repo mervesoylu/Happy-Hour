@@ -7,7 +7,8 @@ namespace Project
     public class CharacterController : MonoBehaviour
     {
         #region ------------------------------dependencies
-        [SerializeField] CharacterSettings _settings;
+        [Inject(Id = "defaultCharacterSettings")] CharacterSettings _defaultSettings;
+        [Inject(Id = "happyHourCharacterSettings")] CharacterSettings _happyHourSettings;
         [Inject] Round _round;
 
         Rigidbody _rigidbody;
@@ -20,7 +21,7 @@ namespace Project
             if (_isStunned)
                 return;
 
-            var velocity = direction * _settings.Speed;
+            var velocity = direction * _currentSettings.Speed;
             _rigidbody.velocity = velocity;
         }
 
@@ -37,17 +38,12 @@ namespace Project
             //_rigidbody.MoveRotation(Quaternion.LookRotation(_facing, _transform.up));
         }
 
-        public void SetSpeed(float speed)
-        {
-            _settings.Speed = speed;
-        }
-
         public void Throw()
         {
             if (_isStunned)
                 return;
 
-            StraightBottleController bottle = Instantiate(_settings.StraightBottle, _transform.position, Quaternion.identity);
+            StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
             bottle.Fly(_facing, _colliders);
         }
 
@@ -56,7 +52,7 @@ namespace Project
             if (_isStunned)
                 return;
 
-            var bottle = Instantiate(_settings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
+            var bottle = Instantiate(_currentSettings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
             bottle.Fly(_facing, _colliders);
         }
 
@@ -74,20 +70,26 @@ namespace Project
         {
             _isStunned = true;
             _rigidbody.velocity = Vector3.zero;
-            Invoke(nameof(removeStun), _settings.StunDuration);
+            Invoke(nameof(removeStun), _currentSettings.StunDuration);
         }
 
         public int PlayerID { get; set; }
 
-        public Sprite Sprite
-        {
-            get { return _settings.Sprite; }
-        }
+        public Sprite Sprite; // can't be a property, because it needs to show up in the inspector.
 
         public void Restart()
         {
             _hp = 4;
             gameObject.SetActive(true);
+        }
+        public void OnHappyHourRan()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnHappyHourStopped()
+        {
+            throw new System.NotImplementedException();
         }
         #endregion
 
@@ -108,6 +110,7 @@ namespace Project
         #endregion
 
         #region ------------------------------details
+        CharacterSettings _currentSettings;
         bool _isStunned;
         Vector3 _facing;
         int _hp;

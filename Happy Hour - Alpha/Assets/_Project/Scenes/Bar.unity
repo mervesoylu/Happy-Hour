@@ -2732,6 +2732,10 @@ MonoBehaviour:
   _boardUIPrefab: {fileID: 1309167285704769750, guid: a1520215c759b174b954c8fac09a505b,
     type: 3}
   _round: {fileID: 686878148}
+  _defaultCharacterSettings: {fileID: 11400000, guid: 4e4447f1dc8ee514ab85c41790369f93,
+    type: 2}
+  _happyHourCharacterSettings: {fileID: 11400000, guid: 1c69f588d8d4fcc4386de2a1576a5e84,
+    type: 2}
 --- !u!114 &686878148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3951,7 +3955,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2912
+  m_Name: pb_Mesh-4526
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4387,7 +4391,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3246
+  m_Name: pb_Mesh-4860
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6870,7 +6874,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3078
+  m_Name: pb_Mesh-4692
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -7686,7 +7690,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3206
+  m_Name: pb_Mesh-4820
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

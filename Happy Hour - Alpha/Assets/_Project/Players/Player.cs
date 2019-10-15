@@ -3,7 +3,7 @@ using XboxCtrlrInput;
 
 namespace Project
 {
-    [CreateAssetMenu(fileName = "Player 0", menuName = "Player")]
+    [CreateAssetMenu(fileName = "Player 0", menuName = "CustomData/Player")]
     public class Player : ScriptableObject
     {
         public XboxController Controller;
