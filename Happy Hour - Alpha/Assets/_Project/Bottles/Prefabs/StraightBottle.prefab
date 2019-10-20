@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6753276746239517203}
   m_Layer: 0
   m_Name: StraightBottle
-  m_TagString: Untagged
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

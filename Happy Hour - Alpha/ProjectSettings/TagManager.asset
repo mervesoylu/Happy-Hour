@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Character
   - Floor
+  - Bottle
   layers:
   - Default
   - TransparentFX

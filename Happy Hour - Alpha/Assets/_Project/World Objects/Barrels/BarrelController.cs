@@ -27,6 +27,9 @@ public class BarrelController : MonoBehaviour
         if (other.CompareTag("Floor"))
             return;
 
+        if (other.CompareTag("Bottle"))
+            return;
+
         if (other.CompareTag("Character"))
             other.GetComponent<Project.CharacterController>().TakeDamage();
 
