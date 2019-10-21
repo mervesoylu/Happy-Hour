@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: 7d40ddb5ef529df408761cb4101037aa
+guid: e7b3afd2e5a6be345ac46bf8abcde740
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCube15
-    100004: pCylinder4
-    100006: pCylinder5
-    100008: pCylinder6
     400000: //RootNode
-    400002: pCube15
-    400004: pCylinder4
-    400006: pCylinder5
-    400008: pCylinder6
-    2100000: lambert1
+    2100000: Metal_Dark
+    2100002: Leather_gold
+    2100004: Leather
+    2100006: Metal_Light
+    2100008: body
+    2100010: Team_colour
     2300000: //RootNode
-    2300002: pCube15
-    2300004: pCylinder4
-    2300006: pCylinder5
-    2300008: pCylinder6
     3300000: //RootNode
-    3300002: pCube15
-    3300004: pCylinder4
-    3300006: pCylinder5
-    3300008: pCylinder6
-    4300000: BarrelLight1
-    4300002: pCylinder4
-    4300004: pCylinder6
-    4300006: pCylinder5
-    4300008: pCube15
+    4300000: pCube39
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8934800546352344156}
   - component: {fileID: 8934800546353475228}
   - component: {fileID: 1976310718}
+  - component: {fileID: 1462998457}
   m_Layer: 0
   m_Name: CenterBar
   m_TagString: Untagged
@@ -121,8 +122,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ef4ee56bcddb641ad6a5b04bca620f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _barrelPrefab: {fileID: 5953879595591610682, guid: 4d09c3f2eeddfd74fbba62badbf33ab4,
+  _barrelPrefab: {fileID: 1530959284726475015, guid: d19e0b3ccd22e1b4eaab366fd3ca7ce9,
     type: 3}
   _barOrigin: {fileID: 997547436905482682}
   _barRadius: 4
   _barHatches: 8
+--- !u!64 &1462998457
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934800546355736668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: daa3bd6e189466b43a71b431294e0017, type: 3}
