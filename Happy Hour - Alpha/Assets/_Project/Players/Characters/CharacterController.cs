@@ -11,6 +11,7 @@ namespace Project
         [Inject(Id = "happyHourCharacterSettings")] CharacterSettings _happyHourSettings;
         [Inject] Round _round;
 
+        public List<GameObject> hps;
         Rigidbody _rigidbody;
         Transform _transform;
         #endregion
@@ -58,7 +59,10 @@ namespace Project
         public void TakeDamage()
         {
             if (_hp > 0)
+            {
                 _hp--;
+                hps[_hp].SetActive(false);
+            }
 
             if (_hp <= 0)
                 die();
@@ -80,6 +84,8 @@ namespace Project
         {
             _hp = 4;
             gameObject.SetActive(true);
+            foreach (var hp in hps)
+                hp.SetActive(true);
         }
         public void OnHappyHourRan()
         {
