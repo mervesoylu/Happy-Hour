@@ -116,6 +116,7 @@ namespace Project
         void finishRound()
         {
             StopCoroutine(nameof(spawnBarrelTracker));
+            stopHappyHour();
             _game.OnRoundFinished(_characters[0].PlayerID);
         }
         #endregion
