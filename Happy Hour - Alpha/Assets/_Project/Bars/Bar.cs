@@ -15,7 +15,7 @@ public class Bar : MonoBehaviour
         float unitCircle = (360f / _barHatches * hatch) * Mathf.Deg2Rad;
         _currentDirection = new Vector3(Mathf.Cos(unitCircle), 0f, Mathf.Sin(unitCircle));
         _initialRotation = _transform.rotation;
-        transform.rotation = Quaternion.LookRotation(Vector3.Cross(_currentDirection, Vector3.up), Vector3.up);
+        transform.rotation = Quaternion.LookRotation(_currentDirection, Vector3.up);
         Vector3 spawnPosition = _barOrigin.position + _barRadius * _currentDirection;
 
         Instantiate(_barrelPrefab, spawnPosition, Quaternion.identity).Roll(_currentDirection);
