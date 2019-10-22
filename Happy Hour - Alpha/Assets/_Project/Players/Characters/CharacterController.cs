@@ -56,12 +56,18 @@ namespace Project
             bottle.Fly(_facing, _colliders);
         }
 
+        bool _isRecovering;
         public void TakeDamage()
         {
+            if (_isRecovering)
+                return;
+
             if (_hp > 0)
             {
                 _hp--;
                 hps[_hp].SetActive(false);
+                _isRecovering = true;
+                Invoke(nameof(removeRecovery), _currentSettings.Recovery);
             }
 
             if (_hp <= 0)
@@ -113,6 +119,11 @@ namespace Project
             _facing = _transform.forward;
             _currentSettings = _defaultSettings;
         }
+
+        private void OnEnable()
+        {
+            _isRecovering = false;
+        }
         #endregion
 
         #region ------------------------------details
@@ -133,6 +144,12 @@ namespace Project
             gameObject.SetActive(false);
             _round.OnPlayerDied(PlayerID);
         }
+
+        void removeRecovery()
+        {
+            _isRecovering = false;
+        }
+
         Vector3 deviateDirection(Vector3 direction)
         {
             Vector3 result;
