@@ -6,9 +6,11 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: lambert2
     2300000: //RootNode
     3300000: //RootNode
     4300000: Stein1
+    4300002: UFOBottle
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +42,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 20
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1

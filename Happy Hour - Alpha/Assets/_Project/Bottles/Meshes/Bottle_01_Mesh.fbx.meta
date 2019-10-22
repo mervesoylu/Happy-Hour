@@ -9,6 +9,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: BeerBottle
+    4300002: RobotBottle
   externalObjects: {}
   materials:
     importMaterials: 1
