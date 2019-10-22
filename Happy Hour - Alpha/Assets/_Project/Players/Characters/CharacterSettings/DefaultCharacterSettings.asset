@@ -20,5 +20,5 @@ MonoBehaviour:
     type: 3}
   StraightCoolDown: 1
   ArcCoolDown: 2
-  Recovery: 3
+  Recovery: 2
   MaxDeviationAmount: 0
