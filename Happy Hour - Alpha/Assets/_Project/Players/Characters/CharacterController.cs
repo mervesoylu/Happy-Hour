@@ -57,6 +57,7 @@ namespace Project
         }
 
         bool _isRecovering;
+
         public void TakeDamage()
         {
             if (_isRecovering)
@@ -75,6 +76,13 @@ namespace Project
 
             print(gameObject.name + ": " + _hp);
         }
+       
+        public void HitEffect(Vector3 force)
+        {
+            _rigidbody.MovePosition(_transform.position += force);
+        }
+        [SerializeField] float knockbackDistance;
+
         public void GetStunned()
         {
             _isStunned = true;
@@ -93,6 +101,7 @@ namespace Project
             foreach (var hp in hps)
                 hp.SetActive(true);
         }
+
         public void OnHappyHourRan()
         {
             _currentSettings = _happyHourSettings;

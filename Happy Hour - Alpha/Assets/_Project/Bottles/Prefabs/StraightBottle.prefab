@@ -124,3 +124,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 20
   _angularSpeed: 210
+  _knockbackForce: 0.5

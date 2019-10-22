@@ -38,6 +38,7 @@ namespace Project
                 {
                     CharacterController character = other.GetComponent<CharacterController>();
                     character.TakeDamage();
+                    character.HitEffect(_rigidbody.velocity.normalized * _knockbackForce);
                 }
 
                 Destroy(gameObject);
@@ -48,6 +49,7 @@ namespace Project
         #region ------------------------------details
         [SerializeField] float _speed;
         [SerializeField] float _angularSpeed;
+        [SerializeField] float _knockbackForce;
         List<Collider> _ownerColliders;
         #endregion
     }
