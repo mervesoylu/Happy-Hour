@@ -18,7 +18,8 @@ public class Bar : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(_currentDirection, Vector3.up);
         Vector3 spawnPosition = _barOrigin.position + _barRadius * _currentDirection;
 
-        Instantiate(_barrelPrefab, spawnPosition, Quaternion.identity).Roll(_currentDirection);
+
+        Instantiate(_barrelPrefab, spawnPosition, Quaternion.LookRotation(Vector3.up, Vector3.Cross(Vector3.up, _currentDirection))).Roll(_currentDirection);
     }
     #endregion
 
