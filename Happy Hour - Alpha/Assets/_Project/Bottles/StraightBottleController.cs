@@ -14,6 +14,7 @@ namespace Project
         public void Fly(Vector3 direction, List<Collider> ownerColliders)
         {
             _ownerColliders = ownerColliders;
+            _rigidbody.MoveRotation(Quaternion.LookRotation(direction));
             _rigidbody.AddForce(direction * _speed, ForceMode.Impulse);
         }
         #endregion
@@ -23,11 +24,6 @@ namespace Project
         {
             _rigidbody = GetComponent<Rigidbody>();
             _transform = transform;
-        }
-
-        private void Update()
-        {
-            _transform.Rotate(_transform.right * _angularSpeed * Time.deltaTime);
         }
 
         private void OnTriggerEnter(Collider other)
