@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &3818948603392004829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4066267902316657976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.38362497, y: 0.43748713, z: 0.64778113}
-  m_Center: {x: -0.0031392972, y: 0.20411555, z: 0.07663192}
 --- !u!1 &4573402011626982585
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,9 +391,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.7133486
-  m_Height: 2.4882002
+  m_Height: 2.9785485
   m_Direction: 1
-  m_Center: {x: 0.04055333, y: 0.2441001, z: 0}
+  m_Center: {x: 0.04055333, y: 0.48927426, z: 0}
 --- !u!54 &1791697963311118390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -740,12 +727,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6024544992796937943, guid: 5097a460e192c2e46b4110bce9d3aa5f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6681024081028240382, guid: 5097a460e192c2e46b4110bce9d3aa5f,
         type: 3}
       propertyPath: m_Materials.Array.data[5]
       value: 
       objectReference: {fileID: 2100000, guid: f3337f18b577d104eb9b0f4dcc172f32, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6024544992796937943, guid: 5097a460e192c2e46b4110bce9d3aa5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5097a460e192c2e46b4110bce9d3aa5f, type: 3}
 --- !u!4 &7890617705195842194 stripped
 Transform:
@@ -826,12 +819,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f3337f18b577d104eb9b0f4dcc172f32, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 604160c130ecf2f46ae9abb6441dde28, type: 3}
---- !u!1 &4066267902316657976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 604160c130ecf2f46ae9abb6441dde28,
-    type: 3}
-  m_PrefabInstance: {fileID: 4066267902316755864}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4066267902317142296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 604160c130ecf2f46ae9abb6441dde28,
