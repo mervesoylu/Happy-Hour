@@ -20,8 +20,9 @@ namespace Project
         public virtual void Update(XboxController controller)
         {
             // movement
-            Vector3 moveDirection = new Vector3(XCI.GetAxis(XboxAxis.LeftStickX, controller), 0, XCI.GetAxis(XboxAxis.LeftStickY, controller));
+            Vector3 moveDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.LeftStickX, controller), 0, XCI.GetAxisRaw(XboxAxis.LeftStickY, controller));
             _characterController.Move(moveDirection);
+            Debug.Log(moveDirection);
 
             // throw
             if (XCI.GetButton(XboxButton.RightBumper, controller) && _straightCoolDownTimer <= 0)
@@ -59,7 +60,7 @@ namespace Project
         {
             // aim
             Vector3 aimDirection = Vector3.zero;
-            if (XCI.GetAxis(XboxAxis.RightStickX, controller) != 0 || XCI.GetAxis(XboxAxis.RightStickY, controller) != 0)
+            if (XCI.GetAxisRaw(XboxAxis.RightStickX, controller) != 0 || XCI.GetAxisRaw(XboxAxis.RightStickY, controller) != 0)
                 aimDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.RightStickX, controller), 0, XCI.GetAxisRaw(XboxAxis.RightStickY, controller));
 
             _characterController.Aim(aimDirection.normalized);
@@ -76,7 +77,7 @@ namespace Project
         {
             // aim
             Vector3 aimDirection = Vector3.zero;
-            if (XCI.GetAxis(XboxAxis.RightStickX, controller) != 0 || XCI.GetAxis(XboxAxis.RightStickY, controller) != 0)
+            if (XCI.GetAxisRaw(XboxAxis.RightStickX, controller) != 0 || XCI.GetAxisRaw(XboxAxis.RightStickY, controller) != 0)
                 aimDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.RightStickX, controller), 0, XCI.GetAxisRaw(XboxAxis.RightStickY, controller));
 
             _characterController.Aim(aimDirection.normalized);

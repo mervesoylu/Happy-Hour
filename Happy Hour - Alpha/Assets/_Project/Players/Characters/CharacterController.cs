@@ -73,8 +73,6 @@ namespace Project
 
             if (_hp <= 0)
                 die();
-
-            print(gameObject.name + ": " + _hp);
         }
        
         public void HitEffect(Vector3 force)
@@ -127,6 +125,11 @@ namespace Project
             _hp = 4;
             _facing = _transform.forward;
             _currentSettings = _defaultSettings;
+        }
+
+        private void FixedUpdate()
+        {
+            //readjustVelocity();
         }
 
         private void OnEnable()
