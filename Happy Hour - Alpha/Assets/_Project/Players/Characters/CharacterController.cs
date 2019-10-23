@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -56,25 +58,24 @@ namespace Project
             bottle.Fly(_facing, _colliders);
         }
 
-        bool _isRecovering;
-
         public void TakeDamage()
         {
-            if (_isRecovering)
+            if (_isInvincible)
                 return;
 
             if (_hp > 0)
             {
                 _hp--;
                 hps[_hp].SetActive(false);
-                _isRecovering = true;
-                Invoke(nameof(removeRecovery), _currentSettings.Recovery);
+                makeInvincible();
+                Invoke(nameof(makeVincible), _currentSettings.Recovery);
             }
 
             if (_hp <= 0)
                 die();
         }
-       
+        bool _isInvincible;
+
         public void HitEffect(Vector3 force)
         {
             _rigidbody.MovePosition(_transform.position += force);
@@ -118,6 +119,7 @@ namespace Project
             _transform = transform;
 
             _colliders = new List<Collider>(GetComponentsInChildren<Collider>(false));
+            _material = findMainMaterial();
         }
 
         void Start()
@@ -127,14 +129,9 @@ namespace Project
             _currentSettings = _defaultSettings;
         }
 
-        private void FixedUpdate()
+        void OnEnable()
         {
-            //readjustVelocity();
-        }
-
-        private void OnEnable()
-        {
-            _isRecovering = false;
+            makeVincible();
         }
         #endregion
 
@@ -144,6 +141,11 @@ namespace Project
         Vector3 _facing;
         int _hp;
         List<Collider> _colliders;
+
+        Material findMainMaterial()
+        {
+            return new List<Material>(GetComponentInChildren<Renderer>().sharedMaterials).FirstOrDefault(m => m.name.Contains("Character"));
+        }
 
         void removeStun()
         {
@@ -157,11 +159,6 @@ namespace Project
             _round.OnPlayerDied(PlayerID);
         }
 
-        void removeRecovery()
-        {
-            _isRecovering = false;
-        }
-
         Vector3 deviateDirection(Vector3 direction)
         {
             Vector3 result;
@@ -171,6 +168,38 @@ namespace Project
 
             return result;
         }
+
+        void makeInvincible()
+        {
+            _isInvincible = true;
+            StartCoroutine(nameof(showInvincibility));
+        }
+
+        void makeVincible()
+        {
+            _isInvincible = false;
+            StopCoroutine(nameof(showInvincibility));
+            setMaterialAlphaTo(1.0f);
+        }
+
+        IEnumerator showInvincibility()
+        {
+            while (true)
+            {
+                setMaterialAlphaTo(0.0f);
+                yield return new WaitForSeconds(0.15f);
+                setMaterialAlphaTo(1.0f);
+                yield return new WaitForSeconds(0.15f);
+            }
+        }
+
+        void setMaterialAlphaTo(float value)
+        {
+            Color color = _material.color;
+            color.a = value;
+            _material.color = color;
+        }
+        Material _material;
         #endregion
     }
 }

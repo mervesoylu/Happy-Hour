@@ -22,7 +22,6 @@ namespace Project
             // movement
             Vector3 moveDirection = new Vector3(XCI.GetAxisRaw(XboxAxis.LeftStickX, controller), 0, XCI.GetAxisRaw(XboxAxis.LeftStickY, controller));
             _characterController.Move(moveDirection);
-            Debug.Log(moveDirection);
 
             // throw
             if (XCI.GetButton(XboxButton.RightBumper, controller) && _straightCoolDownTimer <= 0)

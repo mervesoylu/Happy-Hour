@@ -91,6 +91,7 @@ MonoBehaviour:
   - {fileID: 7486985931392277131}
   knockbackDistance: 0.5
   Sprite: {fileID: 21300000, guid: 1c98060984f932445b0e3e3e51ffd54f, type: 3}
+  _material: {fileID: 2100000, guid: f17bf2486f2259343aa110ad6a430cf9, type: 2}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,15 +658,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5410248260401133783, guid: 3d6813e13795ac340b4709aa8a6a5bf6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4916153851895326206, guid: 3d6813e13795ac340b4709aa8a6a5bf6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410248260401133783, guid: 3d6813e13795ac340b4709aa8a6a5bf6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5410248260401133783, guid: 3d6813e13795ac340b4709aa8a6a5bf6, type: 3}

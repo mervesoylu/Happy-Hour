@@ -429,6 +429,7 @@ MonoBehaviour:
   - {fileID: 2890743261552507543}
   knockbackDistance: 0.5
   Sprite: {fileID: 21300000, guid: 516724d57359e9c46afdae313d6cbce4, type: 3}
+  _invincibleColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,16 +728,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6024544992796937943, guid: 5097a460e192c2e46b4110bce9d3aa5f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6681024081028240382, guid: 5097a460e192c2e46b4110bce9d3aa5f,
         type: 3}
       propertyPath: m_Materials.Array.data[5]
       value: 
       objectReference: {fileID: 2100000, guid: f3337f18b577d104eb9b0f4dcc172f32, type: 2}
+    - target: {fileID: 6024544992796937943, guid: 5097a460e192c2e46b4110bce9d3aa5f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6024544992796937943, guid: 5097a460e192c2e46b4110bce9d3aa5f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5097a460e192c2e46b4110bce9d3aa5f, type: 3}
