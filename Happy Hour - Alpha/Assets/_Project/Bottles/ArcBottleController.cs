@@ -36,7 +36,7 @@ namespace Project
                 return;
 
             if (other.gameObject.tag == "Spill")
-                return;
+                Destroy(gameObject);
 
             if (other.gameObject.tag == "Floor")
             {

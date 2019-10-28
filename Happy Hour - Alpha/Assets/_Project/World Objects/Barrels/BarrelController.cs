@@ -27,6 +27,9 @@ public class BarrelController : MonoBehaviour
         if (other.CompareTag("Floor"))
             return;
 
+        if (other.CompareTag("Spill"))
+            return;
+
         if (other.CompareTag("Bottle"))
             return;
 
