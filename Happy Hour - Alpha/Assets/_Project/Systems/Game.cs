@@ -12,6 +12,7 @@ namespace Project
         [Inject] List<Player> _players;
         [Inject] List<GameObject> _characters;
         [Inject] BoardController _boardController;
+        [Inject] ScoreMoniter _scoreMoniter;
         [Inject] Round _round;
         [Inject] SoundManager _soundManager;
         #endregion
@@ -30,6 +31,7 @@ namespace Project
                 .Score++;
 
             _boardController.Show(_players);
+            _scoreMoniter.Hidden();
 
             //check for game over condition
             Player winner = _players.FirstOrDefault(p => p.Score == 3);
@@ -82,6 +84,7 @@ namespace Project
             }
 
             _boardController.Show(_players);
+            _scoreMoniter.Hidden();
         }
 
         void beginRound()
@@ -89,6 +92,7 @@ namespace Project
             _isRoundBegan = true;
             _boardController.Hide();
             _round.Begin(_characters.Select(c => c.GetComponent<CharacterController>()).ToList(), _isFirstRound);
+            _scoreMoniter.Display(_players);
         }
         bool _isFirstRound;
         #endregion
