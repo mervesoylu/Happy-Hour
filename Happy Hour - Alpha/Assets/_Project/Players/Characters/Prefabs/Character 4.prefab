@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42240724c7bc4445af8e4f6315675e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathAudioClip: {fileID: 8300000, guid: 5655226107efc6149a1d2a59d0af9ded, type: 3}
   hps:
   - {fileID: 6706304227397706744}
   - {fileID: 7152176508697785978}
@@ -429,6 +430,7 @@ MonoBehaviour:
   - {fileID: 6341299303170665710}
   knockbackDistance: 0.5
   Sprite: {fileID: 21300000, guid: f29902806092bc94b947c6566d44895a, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,11 +742,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7331170541145278504}
     m_Modifications:
-    - target: {fileID: 4914494171590779519, guid: 85d4fe0755c19e2459218e855afdf69f,
-        type: 3}
-      propertyPath: m_Name
-      value: Body4
-      objectReference: {fileID: 0}
     - target: {fileID: 4914494171590622815, guid: 85d4fe0755c19e2459218e855afdf69f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -799,6 +796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914494171590779519, guid: 85d4fe0755c19e2459218e855afdf69f,
+        type: 3}
+      propertyPath: m_Name
+      value: Body4
       objectReference: {fileID: 0}
     - target: {fileID: 4914494171588852927, guid: 85d4fe0755c19e2459218e855afdf69f,
         type: 3}

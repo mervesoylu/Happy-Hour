@@ -1,7 +1,4 @@
-﻿#define KEYBOARD
-#undef KEYBOARD
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 using System.Linq;
@@ -16,6 +13,7 @@ namespace Project
         [Inject] List<GameObject> _characters;
         [Inject] BoardController _boardController;
         [Inject] Round _round;
+        [Inject] SoundManager _soundManager;
         #endregion
 
         #region ------------------------------interface
@@ -56,11 +54,7 @@ namespace Project
             if (_isRoundBegan)
                 return;
 
-#if KEYBOARD
-            if (Input.GetKeyDown(KeyCode.Space))
-#else
             if (XCI.GetButtonDown(XboxButton.A))
-#endif
                 if (_isGameEnded)
                 {
                     _isGameEnded = false;

@@ -12,6 +12,8 @@ namespace Project
         [Inject(Id = "defaultCharacterSettings")] CharacterSettings _defaultSettings;
         [Inject(Id = "happyHourCharacterSettings")] CharacterSettings _happyHourSettings;
         [Inject] Round _round;
+        [Inject] SoundManager _soundManager;
+        [SerializeField] AudioClip _deathAudioClip;
 
         public List<GameObject> hps;
         Rigidbody _rigidbody;
@@ -93,6 +95,8 @@ namespace Project
 
         public Sprite Sprite; // can't be a property, because it needs to show up in the inspector.
 
+        public AudioClip Audio; // can't be a property, because it needs to show up in the inspector.
+
         public void Restart()
         {
             _hp = 4;
@@ -154,7 +158,7 @@ namespace Project
 
         void die()
         {
-            print("die");
+            _soundManager.PlayAudioClip(_deathAudioClip);
             gameObject.SetActive(false);
             _round.OnPlayerDied(PlayerID);
         }

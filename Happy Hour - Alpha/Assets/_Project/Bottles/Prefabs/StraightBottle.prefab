@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 2177196938744796357}
   - component: {fileID: 6753276746239517203}
   - component: {fileID: 4858078838786549523}
-  - component: {fileID: 1955856689173840405}
+  - component: {fileID: 6160521081379188546}
   m_Layer: 0
   m_Name: StraightBottle
   m_TagString: Bottle
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fba82e443002f489cbbfe20dd957b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _flyAudioClip: {fileID: 8300000, guid: 25fbe81f5d1f3d94392cd25e7f1f8bf5, type: 3}
+  _hitAudioClip: {fileID: 8300000, guid: 0dc410434a306054abe38c6b72987b73, type: 3}
   _speed: 20
   _angularSpeed: 210
   _knockbackForce: 0.5
@@ -127,7 +129,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.18
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1955856689173840405
+--- !u!114 &6160521081379188546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,12 +138,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4061276761009428363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f8bf8697f3a324c86b44e983660625, type: 3}
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSound: {fileID: 0}
-  breakSound: {fileID: 2015041028489822432, guid: 10641dde031663240b0cce93f020b1dd,
-    type: 3}
+  _containerSource: 2
 --- !u!1001 &5641684626078202106
 PrefabInstance:
   m_ObjectHideFlags: 0

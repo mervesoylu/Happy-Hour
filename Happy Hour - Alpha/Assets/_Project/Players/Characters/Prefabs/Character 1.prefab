@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42240724c7bc4445af8e4f6315675e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _deathAudioClip: {fileID: 8300000, guid: 0eedf174dccdc23439246814dc532e69, type: 3}
   hps:
   - {fileID: 3095176796068688262}
   - {fileID: 6417673579865776395}
@@ -429,6 +430,7 @@ MonoBehaviour:
   - {fileID: 2890743261552507543}
   knockbackDistance: 0.5
   Sprite: {fileID: 21300000, guid: d5f038abc40e2bd4c9a99a11c28d9df9, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0

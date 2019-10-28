@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Zenject;
 
 namespace Project
 {
@@ -8,6 +9,9 @@ namespace Project
         #region ------------------------------dependencies
         Rigidbody _rigidbody;
         Transform _transform;
+        [SerializeField] AudioClip _flyAudioClip;
+        [SerializeField] AudioClip _hitAudioClip;
+        [Inject] SoundManager _soundManager;
         #endregion
 
         #region ------------------------------interfaces
@@ -16,6 +20,7 @@ namespace Project
             _ownerColliders = ownerColliders;
             _rigidbody.MoveRotation(Quaternion.LookRotation(direction));
             _rigidbody.AddForce(direction * _speed, ForceMode.Impulse);
+            _soundManager.PlayAudioClip(_flyAudioClip);
         }
         #endregion
 
@@ -37,6 +42,7 @@ namespace Project
                     character.HitEffect(_rigidbody.velocity.normalized * _knockbackForce);
                 }
 
+                _soundManager.PlayAudioClip(_hitAudioClip);
                 Destroy(gameObject);
             }
         }

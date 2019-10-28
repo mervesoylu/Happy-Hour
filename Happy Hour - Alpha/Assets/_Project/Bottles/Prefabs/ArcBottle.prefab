@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7627519099378333871}
   - component: {fileID: 5021327098629120507}
   - component: {fileID: 9152733204380273351}
+  - component: {fileID: 8389900496742000006}
   m_Layer: 0
   m_Name: ArcBottle
   m_TagString: Bottle
@@ -124,6 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spillPrefab: {fileID: 880286632056449681, guid: 8b6f1f844c3571f4e8f8983dad796309,
     type: 3}
+  _flyAudioClip: {fileID: 8300000, guid: 6e72e6c8e688ec446aaeb1f9fcfbbc3f, type: 3}
+  _hitAudioClip: {fileID: 8300000, guid: 5c4ba5f0ac124254fbeb9073c6eb7b5b, type: 3}
   _speed: 2
   _arcSize: {x: 12, y: 5}
   _trajectory:
@@ -150,3 +153,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8389900496742000006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284779671306250705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _containerSource: 2
