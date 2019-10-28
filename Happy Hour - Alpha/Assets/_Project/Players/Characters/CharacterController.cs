@@ -95,8 +95,6 @@ namespace Project
 
         public Sprite Sprite; // can't be a property, because it needs to show up in the inspector.
 
-        public AudioClip Audio; // can't be a property, because it needs to show up in the inspector.
-
         public void Restart()
         {
             _hp = 4;
