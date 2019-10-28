@@ -31,7 +31,7 @@ namespace Project
                 .Score++;
 
             _boardController.Show(_players);
-            _scoreMoniter.Hidden();
+            _scoreMoniter.Hide();
 
             //check for game over condition
             Player winner = _players.FirstOrDefault(p => p.Score == 3);
@@ -47,6 +47,7 @@ namespace Project
         #region ------------------------------details
         public void Initialize()
         {
+            _scoreMoniter.Hide();
             SetupPlayers();
             _isFirstRound = true;
         }
@@ -84,7 +85,6 @@ namespace Project
             }
 
             _boardController.Show(_players);
-            _scoreMoniter.Hidden();
         }
 
         void beginRound()

@@ -29,7 +29,7 @@ namespace Project
             gameObject.SetActive(true);
         }
 
-        public void Hidden()
+        public void Hide()
         {
             gameObject.SetActive(false);
         }
