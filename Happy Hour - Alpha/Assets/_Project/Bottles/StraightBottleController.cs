@@ -33,6 +33,9 @@ namespace Project
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.CompareTag("Spill"))
+                return;
+
             if (!_ownerColliders.Contains(other))
             {
                 if (other.CompareTag("Character"))
