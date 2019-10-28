@@ -428,7 +428,7 @@ MonoBehaviour:
   - {fileID: 5056174890379841099}
   - {fileID: 7984374687558657436}
   knockbackDistance: 2
-  Sprite: {fileID: 21300000, guid: f29902806092bc94b947c6566d44895a, type: 3}
+  Sprite: {fileID: 21300000, guid: 1c98060984f932445b0e3e3e51ffd54f, type: 3}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0

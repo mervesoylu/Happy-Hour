@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: 8529312108399620825}
   - {fileID: 7486985931392277131}
   knockbackDistance: 0.5
-  Sprite: {fileID: 21300000, guid: 1c98060984f932445b0e3e3e51ffd54f, type: 3}
+  Sprite: {fileID: 21300000, guid: 516724d57359e9c46afdae313d6cbce4, type: 3}
 --- !u!114 &3760790523250805240
 MonoBehaviour:
   m_ObjectHideFlags: 0
