@@ -80,7 +80,10 @@ namespace Project
 
         public void HitEffect(Vector3 force)
         {
-            _rigidbody.MovePosition(_transform.position += force);
+            if(_isInvincible == false)
+            {
+                _rigidbody.MovePosition(_transform.position += force);
+            }
         }
         [SerializeField] float knockbackDistance;
 
@@ -100,7 +103,9 @@ namespace Project
             _hp = 4;
             gameObject.SetActive(true);
             foreach (var hp in hps)
+            {
                 hp.SetActive(true);
+            }
         }
 
         public void OnHappyHourRan()

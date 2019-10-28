@@ -35,6 +35,9 @@ namespace Project
             if (_ownerColliders.Contains(other))
                 return;
 
+            if (other.gameObject.tag == "Spill")
+                return;
+
             if (other.gameObject.tag == "Floor")
             {
                 Instantiate(_spillPrefab, _transform.position, Quaternion.identity);
