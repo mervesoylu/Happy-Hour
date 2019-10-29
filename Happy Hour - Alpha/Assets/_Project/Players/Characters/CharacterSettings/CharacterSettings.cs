@@ -9,6 +9,7 @@ namespace Project
     {
         public float Speed;
         public float StunDuration;
+        public float ImmobilityDuration;
         public StraightBottleController StraightBottle;
         public ArcBottleController ArcBottle;
         public float StraightCoolDown;

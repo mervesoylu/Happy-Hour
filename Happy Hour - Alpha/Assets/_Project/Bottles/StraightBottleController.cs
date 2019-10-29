@@ -41,8 +41,8 @@ namespace Project
                 if (other.CompareTag("Character"))
                 {
                     CharacterController character = other.GetComponent<CharacterController>();
-                    character.TakeDamage();
                     character.HitEffect(_rigidbody.velocity.normalized * _knockbackForce);
+                    character.TakeDamage();
                 }
 
                 _soundManager.PlayAudioClip(_hitAudioClip);

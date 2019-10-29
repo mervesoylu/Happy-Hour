@@ -23,7 +23,7 @@ namespace Project
         #region ------------------------------interface
         public void Move(Vector3 direction)
         {
-            if (_isStunned)
+            if (_isImmobilised)
                 return;
 
             var velocity = direction * _currentSettings.Speed;
@@ -32,7 +32,7 @@ namespace Project
 
         public void Aim(Vector3 direction)
         {
-            if (_isStunned)
+            if (_isImmobilised)
                 return;
 
             if (direction == Vector3.zero)
@@ -44,7 +44,7 @@ namespace Project
 
         public void Throw()
         {
-            if (_isStunned)
+            if (_isImmobilised)
                 return;
 
             StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
@@ -53,7 +53,7 @@ namespace Project
 
         public void Toss()
         {
-            if (_isStunned)
+            if (_isImmobilised)
                 return;
 
             var bottle = Instantiate(_currentSettings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
@@ -80,18 +80,20 @@ namespace Project
 
         public void HitEffect(Vector3 force)
         {
-            if(_isInvincible == false)
-            {
-                _rigidbody.MovePosition(_transform.position += force);
-            }
+            if (_isInvincible)
+                return;
+
+            _isImmobilised = true;
+            Invoke(nameof(removeImmobility), _currentSettings.ImmobilityDuration);
+
+            _rigidbody.AddForce(force, ForceMode.Impulse);
         }
-        [SerializeField] float knockbackDistance;
 
         public void GetStunned()
         {
-            _isStunned = true;
+            _isImmobilised = true;
             _rigidbody.velocity = Vector3.zero;
-            Invoke(nameof(removeStun), _currentSettings.StunDuration);
+            Invoke(nameof(removeImmobility), _currentSettings.StunDuration);
         }
 
         public int PlayerID { get; set; }
@@ -144,7 +146,7 @@ namespace Project
 
         #region ------------------------------details
         CharacterSettings _currentSettings;
-        bool _isStunned;
+        bool _isImmobilised;
         Vector3 _facing;
         int _hp;
         List<Collider> _colliders;
@@ -154,9 +156,9 @@ namespace Project
             return new List<Material>(GetComponentInChildren<Renderer>().sharedMaterials).FirstOrDefault(m => m.name.Contains("Character"));
         }
 
-        void removeStun()
+        void removeImmobility()
         {
-            _isStunned = false;
+            _isImmobilised = false;
         }
 
         void die()
