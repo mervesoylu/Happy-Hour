@@ -78,9 +78,12 @@ namespace Project
                                 _readyControllers.Add(i);
                                 _readyMenu.Ready(i);
 
-                                if (_readyControllers.Count == 4)
-                                    _currentGameState = GameState.READY;
+                                //if (_readyControllers.Count == 4)
+                                //    _currentGameState = GameState.READY;
                             }
+
+                            //temp
+                            _currentGameState = GameState.READY;
                         }
                     }
                     break;
