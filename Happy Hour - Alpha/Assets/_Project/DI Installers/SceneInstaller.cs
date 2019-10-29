@@ -11,6 +11,7 @@ namespace Project
         [SerializeField] List<GameObject> _characters;
         [SerializeField] List<Transform> _spawnPoints;
         [SerializeField] GameObject _boardUIPrefab;
+        [SerializeField] GameObject _readyMenuPrefab;
         [SerializeField] ScoreMoniter _scoreMoniter;
         [SerializeField] Round _round;
         [SerializeField] CharacterSettings _defaultCharacterSettings;
@@ -22,6 +23,7 @@ namespace Project
             Container.Bind<CharacterSettings>().WithId("defaultCharacterSettings").FromNewScriptableObject(_defaultCharacterSettings).AsTransient(); // could be AsSingle() since all characters share the same settings, but in case in the furture we wanna have individual settings per character.
             Container.Bind<CharacterSettings>().WithId("happyHourCharacterSettings").FromNewScriptableObject(_happyHourCharacterSettings).AsTransient(); // could be AsSingle() since all characters share the same settings, but in case in the furture we wanna have individual settings per character.
             Container.Bind<BoardController>().FromComponentInNewPrefab(_boardUIPrefab).AsSingle();
+            Container.Bind<ReadyMenuController>().FromComponentInNewPrefab(_readyMenuPrefab).AsSingle();
             Container.Bind<SoundManager>().FromComponentInHierarchy().AsSingle();
             Container.BindInterfacesAndSelfTo<Game>().AsSingle();
         }

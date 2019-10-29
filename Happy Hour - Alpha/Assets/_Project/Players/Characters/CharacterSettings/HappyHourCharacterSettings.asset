@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 11
   StunDuration: 2
-  ImmobilityDuration: 0
+  ImmobilityDuration: 0.2
   StraightBottle: {fileID: 6753276746239517203, guid: 4fa35c5f5148bed4d8d9fd7e02934056,
     type: 3}
   ArcBottle: {fileID: 9152733204380273351, guid: c894b9fee4efd624290d4e7ff6e909e5,
