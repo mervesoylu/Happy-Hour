@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.2000122, y: 2.100006}
-  m_SizeDelta: {x: -93.6, y: -97.1}
+  m_AnchoredPosition: {x: -2.2000122, y: 14.200012}
+  m_SizeDelta: {x: -270.93, y: -128.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &480851403856575487
 CanvasRenderer:
@@ -113,7 +113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.7, y: 52}
+  m_AnchoredPosition: {x: 1.7, y: 32}
   m_SizeDelta: {x: 238.7, y: 72.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7757476598945779602
@@ -174,8 +174,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.65952617, g: 0.6981132, b: 0.21404415, a: 1}
-    m_PressedColor: {r: 0.41077706, g: 0.4433962, b: 0.07320219, a: 1}
+    m_HighlightedColor: {r: 0.9504576, g: 0.9716981, b: 0.7104397, a: 1}
+    m_PressedColor: {r: 0.945002, g: 1, b: 0.3537736, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -189,7 +189,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 8560994549878344028}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -204,6 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972372614375759813}
+  - component: {fileID: 2071378870}
   m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -226,6 +227,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071378870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513121282258009315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc9aa65ac4b5eb418aa50a759629d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resumeButton: {fileID: 8552383861835224980}
+  _mainMenuButton: {fileID: 3901732492198336018}
+  _pauseMenuCanvas: {fileID: 74525245592629129}
 --- !u!1 &5827657268779330804
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -438,7 +454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 192.7}
+  m_AnchoredPosition: {x: 0, y: 124.399994}
   m_SizeDelta: {x: 397.1, y: 102.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4237971230714336778
@@ -602,7 +618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.7, y: -70}
+  m_AnchoredPosition: {x: 1.7, y: -90}
   m_SizeDelta: {x: 301.8, y: 70.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7358892816583627949
@@ -663,8 +679,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.65952617, g: 0.6981132, b: 0.21404415, a: 1}
-    m_PressedColor: {r: 0.41077706, g: 0.4433962, b: 0.07320219, a: 1}
+    m_HighlightedColor: {r: 0.97583985, g: 1, b: 0.7028302, a: 1}
+    m_PressedColor: {r: 0.9458049, g: 1, b: 0.36320752, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -678,7 +694,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 4452311349773727012}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []

@@ -194,22 +194,22 @@ PrefabInstance:
     - target: {fileID: 388765124000531297, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 388765124000531297, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 388765125869664949, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 388765125869664949, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 388765124660964558, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}

@@ -128,6 +128,7 @@ ModelImporter:
     400120: Shelves_Left
     400122: Shelves_Right
     2100000: lambert1
+    2100002: LargeBar
     2300000: BackBar_Base
     2300002: BackBar_Top
     2300004: Grate_Outside
@@ -184,6 +185,7 @@ ModelImporter:
     2300106: pCube9 1
     2300108: polySurface5
     2300110: polySurface7
+    2300112: //RootNode
     3300000: BackBar_Base
     3300002: BackBar_Top
     3300004: Grate_Outside
@@ -240,6 +242,7 @@ ModelImporter:
     3300106: pCube9 1
     3300108: polySurface5
     3300110: polySurface7
+    3300112: //RootNode
     4300000: BackBar_Top
     4300002: BackBar_Base
     4300004: Grate_Outside
@@ -296,6 +299,7 @@ ModelImporter:
     4300106: pCube11
     4300108: pCube27
     4300110: pCube28
+    4300112: MainBar
   externalObjects: {}
   materials:
     importMaterials: 1
