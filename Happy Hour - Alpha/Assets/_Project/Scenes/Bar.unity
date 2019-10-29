@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7498,7 +7498,7 @@ PrefabInstance:
     - target: {fileID: 3513121282258009315, guid: cfbca5352d790b04db4b7e9602c9dc10,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8972372614375759813, guid: cfbca5352d790b04db4b7e9602c9dc10,
         type: 3}
@@ -9524,7 +9524,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1708
+  m_Name: pb_Mesh24662
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
