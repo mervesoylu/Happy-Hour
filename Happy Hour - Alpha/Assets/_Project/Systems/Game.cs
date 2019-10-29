@@ -57,10 +57,15 @@ namespace Project
             if (_isRoundBegan)
                 return;
 
-            if (XCI.GetButtonDown(XboxButton.A))
+            for (int i = 1; i <= 4; i++)
+                if (XCI.GetButtonDown(XboxButton.A, (XboxController)i))
+                    _readyControllers.Add(i);
+
+            if (XCI.GetButtonDown(XboxButton.Start, XboxController.First) && _readyControllers.Count == 4)
                 if (_isGameEnded)
                 {
                     _isGameEnded = false;
+                    _readyControllers.Clear();
                     SetupPlayers();
                     return;
                 }
@@ -69,6 +74,7 @@ namespace Project
         }
         bool _isRoundBegan;
         bool _isGameEnded;
+        HashSet<int> _readyControllers = new HashSet<int>();
 
         /// <summary>
         /// It assigns character models to players randomly and starts the first round.
