@@ -102,7 +102,7 @@ namespace Project
 
         public void Restart()
         {
-            _hp = 4;
+            _hp = 3;
             gameObject.SetActive(true);
             foreach (var hp in hps)
             {
@@ -133,7 +133,7 @@ namespace Project
 
         void Start()
         {
-            _hp = 4;
+            _hp = 3;
             _facing = _transform.forward;
             _currentSettings = _defaultSettings;
         }

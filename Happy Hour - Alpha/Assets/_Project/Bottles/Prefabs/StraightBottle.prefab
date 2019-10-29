@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _flyAudioClip: {fileID: 8300000, guid: 25fbe81f5d1f3d94392cd25e7f1f8bf5, type: 3}
   _hitAudioClip: {fileID: 8300000, guid: 0dc410434a306054abe38c6b72987b73, type: 3}
-  _speed: 20
+  _speed: 30
   _angularSpeed: 210
   _knockbackForce: 10
 --- !u!135 &4858078838786549523
