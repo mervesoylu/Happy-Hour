@@ -84,4 +84,13 @@ namespace Project
             base.Update(controller);
         }
     }
+
+    public class BlankCharacterInputState : CharacterInputState
+    {
+        public BlankCharacterInputState(CharacterSettings settings, CharacterController characterController) : base(settings, characterController) { }
+
+        public override void Update(XboxController controller)
+        { }
+
+    }
 }

@@ -28,6 +28,16 @@ namespace Project
         {
             _currentState = _defaultState;
         }
+
+        public void OnroundBegan()
+        {
+            _currentState = _defaultState;
+        }
+
+        public void OnroundEnded()
+        {
+            _currentState = _blankState;
+        }
         #endregion
 
         #region ------------------------------Unity messages
@@ -40,6 +50,7 @@ namespace Project
         {
             _defaultState = new DefaultCharacterInputState(_defaultSettings, _characterController);
             _happyHourState = new HappyHourCharacterInputState(_happyHourSettings, _characterController);
+            _blankState = new BlankCharacterInputState(_defaultSettings, _characterController);
 
             _currentState = _defaultState;
         }
@@ -55,6 +66,7 @@ namespace Project
         CharacterInputState _currentState;
         CharacterInputState _defaultState;
         CharacterInputState _happyHourState;
+        CharacterInputState _blankState;
         #endregion
         #endregion
     }
