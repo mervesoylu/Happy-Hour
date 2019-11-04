@@ -3,17 +3,138 @@ guid: e7b3afd2e5a6be345ac46bf8abcde740
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Metal_Dark
-    2100002: Leather_gold
-    2100004: Leather
-    2100006: Metal_Light
-    2100008: body
+    100000: Alien_Skull_Bottle
+    100002: Alien_Skull_Bottle3
+    100004: Bones
+    100006: Bottles_low
+    100008: Cape_JNT1
+    100010: Cape_JNT2
+    100012: Cape_JNT3
+    100014: Cape_JNT4
+    100016: Cape_Tail_END1
+    100018: Cape_Tail_END2
+    100020: Cape_Tail_JNT1
+    100022: Cape_Tail_JNT2
+    100024: Character_Modeular_Body_low
+    100026: //RootNode
+    100028: CharacterHead1Retop
+    100030: CharacterHead2Retop
+    100032: Characterhead3Retop
+    100034: CharacterHead4Retop
+    100036: Coke_Style_Bottle1
+    100038: Coke_Style_Bottle3
+    100040: Head
+    100042: Heads
+    100044: L_Ankle_JNT
+    100046: L_Elbow_JNT
+    100048: L_Finger_JNT1
+    100050: L_Finger_JNT2
+    100052: L_Foot_JNT
+    100054: L_Hand_JNT
+    100056: L_Hip_JNT
+    100058: L_Knee_JNT
+    100060: L_Shoulder_JNT
+    100062: L_Thumb_JNT1
+    100064: L_Thumb_JNT2
+    100066: L_Wrist_JNT
+    100068: Mesh
+    100070: Neck_JNT
+    100072: Pelvis_JNT
+    100074: R_Ankle_JNT
+    100076: R_Elbow_JNT
+    100078: R_Finger_JNT1
+    100080: R_Finger_JNT2
+    100082: R_Foot_JNT
+    100084: R_Hand_JNT
+    100086: R_Hip_JNT
+    100088: R_Knee_JNT
+    100090: R_Shoulder_JNT
+    100092: R_Thumb_JNT1
+    100094: R_Thumb_JNT2
+    100096: R_Wrist_JNT
+    100098: Root_JNT
+    100100: Spine_JNT1
+    100102: Spine_JNT2
+    400000: Alien_Skull_Bottle
+    400002: Alien_Skull_Bottle3
+    400004: Bones
+    400006: Bottles_low
+    400008: Cape_JNT1
+    400010: Cape_JNT2
+    400012: Cape_JNT3
+    400014: Cape_JNT4
+    400016: Cape_Tail_END1
+    400018: Cape_Tail_END2
+    400020: Cape_Tail_JNT1
+    400022: Cape_Tail_JNT2
+    400024: Character_Modeular_Body_low
+    400026: //RootNode
+    400028: CharacterHead1Retop
+    400030: CharacterHead2Retop
+    400032: Characterhead3Retop
+    400034: CharacterHead4Retop
+    400036: Coke_Style_Bottle1
+    400038: Coke_Style_Bottle3
+    400040: Head
+    400042: Heads
+    400044: L_Ankle_JNT
+    400046: L_Elbow_JNT
+    400048: L_Finger_JNT1
+    400050: L_Finger_JNT2
+    400052: L_Foot_JNT
+    400054: L_Hand_JNT
+    400056: L_Hip_JNT
+    400058: L_Knee_JNT
+    400060: L_Shoulder_JNT
+    400062: L_Thumb_JNT1
+    400064: L_Thumb_JNT2
+    400066: L_Wrist_JNT
+    400068: Mesh
+    400070: Neck_JNT
+    400072: Pelvis_JNT
+    400074: R_Ankle_JNT
+    400076: R_Elbow_JNT
+    400078: R_Finger_JNT1
+    400080: R_Finger_JNT2
+    400082: R_Foot_JNT
+    400084: R_Hand_JNT
+    400086: R_Hip_JNT
+    400088: R_Knee_JNT
+    400090: R_Shoulder_JNT
+    400092: R_Thumb_JNT1
+    400094: R_Thumb_JNT2
+    400096: R_Wrist_JNT
+    400098: Root_JNT
+    400100: Spine_JNT1
+    400102: Spine_JNT2
+    2100000: lambert12
+    2100002: lambert14
+    2100004: lambert13
+    2100006: lambert15
+    2100008: Body_Base
     2100010: Team_colour
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube39
+    2100012: Bottles
+    2100014: lambert11
+    4300000: CharacterHead1Retop
+    4300002: CharacterHead2Retop
+    4300004: Characterhead3Retop
+    4300006: CharacterHead4Retop
+    4300008: Character_Modeular_Body_low
+    4300010: Coke_Style_Bottle3
+    4300012: Alien_Skull_Bottle3
+    4300014: Coke_Style_Bottle1
+    4300016: Alien_Skull_Bottle
+    9500000: //RootNode
+    13700000: Alien_Skull_Bottle
+    13700002: Alien_Skull_Bottle3
+    13700004: Character_Modeular_Body_low
+    13700006: CharacterHead1Retop
+    13700008: CharacterHead2Retop
+    13700010: Characterhead3Retop
+    13700012: CharacterHead4Retop
+    13700014: Coke_Style_Bottle1
+    13700016: Coke_Style_Bottle3
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -66,8 +187,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -94,7 +215,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
