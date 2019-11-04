@@ -1,44 +1,37 @@
 fileFormatVersion: 2
-guid: 3112d71e8bbbe094e8de5809e2303508
+guid: 397b6686b2b26124c9a76e7c72620bf3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Chest_JNT
-    100004: CTRL
-    100006: Hand
-    100008: Hand 1
-    100010: Head
-    100012: L_Ball_Rotation_JNT
-    100014: L_Shoulder_CTRL
-    100016: L_Shoulder_JNT
-    100018: Neck_JNT
-    100020: R_Ball_Rotation_JNT
-    100022: R_Elbow_JNT
-    100024: R_Shoulder_CTRL
-    100026: R_Shoulder_JNT
-    100028: Robot
-    100030: Root_JNT
-    100032: Torso_CTRL
-    400000: //RootNode
-    400002: Chest_JNT
-    400004: CTRL
-    400006: Hand
-    400008: Hand 1
-    400010: Head
-    400012: L_Ball_Rotation_JNT
-    400014: L_Shoulder_CTRL
-    400016: L_Shoulder_JNT
-    400018: Neck_JNT
-    400020: R_Ball_Rotation_JNT
-    400022: R_Elbow_JNT
-    400024: R_Shoulder_CTRL
-    400026: R_Shoulder_JNT
-    400028: Robot
-    400030: Root_JNT
-    400032: Torso_CTRL
+    100000: Chest_JNT
+    100002: Hand
+    100004: Hand 1
+    100006: Head
+    100008: L_Ball_Rotation_JNT
+    100010: L_Shoulder_JNT
+    100012: Neck_JNT
+    100014: R_Ball_Rotation_JNT
+    100016: R_Elbow_JNT
+    100018: R_Shoulder_JNT
+    100020: Robot
+    100022: //RootNode
+    100024: Root_JNT
+    400000: Chest_JNT
+    400002: Hand
+    400004: Hand 1
+    400006: Head
+    400008: L_Ball_Rotation_JNT
+    400010: L_Shoulder_JNT
+    400012: Neck_JNT
+    400014: R_Ball_Rotation_JNT
+    400016: R_Elbow_JNT
+    400018: R_Shoulder_JNT
+    400020: Robot
+    400022: //RootNode
+    400024: Root_JNT
     2100000: lambert1
     4300000: Robot
+    7400000: Take 001
     9500000: //RootNode
     13700000: Robot
   externalObjects: {}
@@ -68,7 +61,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
