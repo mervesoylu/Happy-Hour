@@ -1766,6 +1766,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1c98060984f932445b0e3e3e51ffd54f,
         type: 3}
+    - target: {fileID: 8545160086925639470, guid: ce296ba59837aa743ba3ae4e8addcd1b,
+        type: 3}
+      propertyPath: _throwDeadzoneDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce296ba59837aa743ba3ae4e8addcd1b, type: 3}
 --- !u!1 &199027811 stripped
@@ -2822,7 +2827,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2020
+  m_Name: pb_Mesh-2170
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3680,6 +3685,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 516724d57359e9c46afdae313d6cbce4,
         type: 3}
+    - target: {fileID: 8545160086925639470, guid: 59a41224360e4bc46a27c3ff21a46ed2,
+        type: 3}
+      propertyPath: _throwDeadzoneDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a41224360e4bc46a27c3ff21a46ed2, type: 3}
 --- !u!1 &409200975 stripped
@@ -5529,6 +5539,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f29902806092bc94b947c6566d44895a,
         type: 3}
+    - target: {fileID: 8545160086925639470, guid: 3e4de5a684cbd9849b499e683a43e1db,
+        type: 3}
+      propertyPath: _throwDeadzoneDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4de5a684cbd9849b499e683a43e1db, type: 3}
 --- !u!1 &724207799 stripped
@@ -5805,6 +5820,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d5f038abc40e2bd4c9a99a11c28d9df9,
         type: 3}
+    - target: {fileID: 8545160086925639470, guid: b6a1f2c775ba5e743ac6ef86cfcf6086,
+        type: 3}
+      propertyPath: _throwDeadzoneDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a1f2c775ba5e743ac6ef86cfcf6086, type: 3}
 --- !u!1 &739415701 stripped
@@ -7567,7 +7587,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2168
+  m_Name: pb_Mesh-2318
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -12026,7 +12046,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1422
+  m_Name: pb_Mesh-1572
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -12873,7 +12893,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1770
+  m_Name: pb_Mesh-1920
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

@@ -47,8 +47,12 @@ namespace Project
             if (_isImmobilised)
                 return;
 
-            StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
-            bottle.Fly(deviateDirection(_facing), _colliders);
+            if (Time.time >= _nextThrowTime)
+            {
+                _nextThrowTime = Time.time + _throwDeadzoneDuration;
+                StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
+                bottle.Fly(deviateDirection(_facing), _colliders);
+            }
         }
 
         public void Toss()
@@ -56,9 +60,15 @@ namespace Project
             if (_isImmobilised)
                 return;
 
-            var bottle = Instantiate(_currentSettings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
-            bottle.Fly(_facing, _colliders);
+            if (Time.time >= _nextThrowTime)
+            {
+                _nextThrowTime = Time.time + _throwDeadzoneDuration;
+                var bottle = Instantiate(_currentSettings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
+                bottle.Fly(_facing, _colliders);
+            }
         }
+        [SerializeField] float _throwDeadzoneDuration;
+        float _nextThrowTime;
 
         public void TakeDamage()
         {
