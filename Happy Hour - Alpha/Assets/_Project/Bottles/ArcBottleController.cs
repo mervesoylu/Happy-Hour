@@ -45,7 +45,12 @@ namespace Project
                 _soundManager.PlayAudioClip(_hitAudioClip);
                 Destroy(gameObject);
             }
+
+            if (!_ownerColliders.Contains(other))
+                Destroy(gameObject, DestroyArc);
+            
         }
+        float DestroyArc = 2.0f;
         #endregion
 
         #region ------------------------------details
