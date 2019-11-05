@@ -9,14 +9,8 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] Button _resumeButton;
     [SerializeField] Button _mainMenuButton;
     [SerializeField] Canvas _pauseMenuCanvas;
-    
-    void Update()
-    {
-        if (XCI.GetButtonDown(XboxButton.Start))
-            pauseGame();
-    }
 
-    void pauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0;
         _pauseMenuCanvas.gameObject.SetActive(true);

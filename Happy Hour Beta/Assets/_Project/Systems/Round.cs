@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
 using Zenject;
@@ -11,32 +12,26 @@ namespace Project
         #region ------------------------------dependencies
         [Inject] Game _game;
         [Inject] List<Transform> _spawnPoints;
-        [SerializeField] Bar _bar;
         List<CharacterController> _characters;
+        [SerializeField] Bar _bar;
         [SerializeField] TextMeshProUGUI _happyHourTextUI;
         #endregion
 
         #region ------------------------------interface
-        public void Begin(List<CharacterController> characters, bool isFirstRound)
+        public void Begin(List<CharacterController> characters)
         {
-            StartCoroutine(nameof(spawnBarrelTracker));
-
             _characters = characters;
 
-            if (!isFirstRound)
-                _spawnPoints.Shuffle();
+            _roundCounter++;
+            StartCoroutine(nameof(spawnBarrelTracker));
 
+            if (_roundCounter == 1)
+                _spawnPoints.Shuffle();
 
             for (int i = 0; i < _characters.Count; i++)
                 _characters[i].transform.position = _spawnPoints[i].position;
 
             _characters.ForEach(ch => ch.Restart());
-        }
-        bool _isFirstRound = true;
-
-        public void Pause()
-        {
-            throw new System.NotImplementedException();
         }
 
         /// <summary>
@@ -52,6 +47,12 @@ namespace Project
             if (_characters.Count == 1)
                 finishRound();
         }
+
+        public void ResetRoundCounter()
+        {
+            _roundCounter = 0;
+        }
+
         #endregion
 
         #region ------------------------------Unity messages
@@ -85,7 +86,6 @@ namespace Project
             _bar.SpawnBarrel();
             _spawnedBarrelsCounter++;
         }
-
         [SerializeField] float _barrelSpawnInterval;
         [SerializeField] int _numberOfBarrelsToInitiateHappuHour;
         [SerializeField] float _happyHourDuration;
@@ -119,6 +119,8 @@ namespace Project
             stopHappyHour();
             _game.OnRoundFinished(_characters[0].PlayerID);
         }
+
+        int _roundCounter;
         #endregion
     }
 }
