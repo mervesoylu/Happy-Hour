@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42240724c7bc4445af8e4f6315675e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathAudioClip: {fileID: 8300000, guid: 4bf9661439382b248bc041cda9d87907, type: 3}
+  _deathAudioClip: {fileID: 8300000, guid: 8c638460e3b6d2b4fab854258205653d, type: 3}
   hps:
   - {fileID: 8740012406086086113}
   - {fileID: 3424221047428082793}
@@ -553,18 +553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterBody
       objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100032, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100034, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -613,6 +601,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b2e8e0982506ad949afa53a88a74c352, type: 2}
+    - target: {fileID: 100032, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7b3afd2e5a6be345ac46bf8abcde740, type: 3}
 --- !u!4 &6035486355014997307 stripped
