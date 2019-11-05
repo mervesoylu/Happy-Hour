@@ -4481,7 +4481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37862
+  m_Name: pb_Mesh-36630
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -5143,6 +5143,7 @@ MonoBehaviour:
     type: 2}
   _happyHourCharacterSettings: {fileID: 11400000, guid: 1c69f588d8d4fcc4386de2a1576a5e84,
     type: 2}
+  _numberOfRoundsPerGame: 3
 --- !u!114 &686878148
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ namespace Project
         [Inject] ScoreMoniter _scoreMoniter;
         [Inject] BoardController _board;   
         [Inject] SoundManager _soundManager;
+        [Inject(Id = "numberOfRoundsPerGame")] int _numberOfRoundsPerGame;
         #endregion
 
         #region ------------------------------interface
@@ -52,7 +53,6 @@ namespace Project
             else
                 ChangeState(_eofRoundState);
         }
-        [SerializeField] int _numberOfRoundsPerGame;
 
         public void ChangeState(GameState state)
         {
