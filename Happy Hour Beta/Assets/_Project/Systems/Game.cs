@@ -45,13 +45,14 @@ namespace Project
                 .Score++;
 
             //check for game over condition
-            Player winner = _players.FirstOrDefault(p => p.Score == 3);
+            Player winner = _players.FirstOrDefault(p => p.Score == _numberOfRoundsPerGame);
 
             if (winner != null)
                 ChangeState(_eofGameState);
             else
                 ChangeState(_eofRoundState);
         }
+        [SerializeField] int _numberOfRoundsPerGame;
 
         public void ChangeState(GameState state)
         {

@@ -40,11 +40,9 @@ namespace Project
         /// <param name="playerID"> It is the Player's Controller attribute</param>
         public void OnPlayerDied(int playerID)
         {
-            for (int i = 0; i < _characters.Count; i++)
-                if (_characters[i].PlayerID == playerID)
-                    _characters.RemoveAt(i);
+            int alivePlayersCount = _characters.Where(ch => ch.gameObject.activeSelf).Count();
 
-            if (_characters.Count == 1)
+            if (alivePlayersCount <= 1)
                 finishRound();
         }
 
