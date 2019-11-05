@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7b3afd2e5a6be345ac46bf8abcde740
+guid: 21d1fab14d0b7d141a73ec956e0fbc43
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -15,8 +15,8 @@ ModelImporter:
     100018: Cape_Tail_END2
     100020: Cape_Tail_JNT1
     100022: Cape_Tail_JNT2
-    100024: Character_Modeular_Body_low
-    100026: //RootNode
+    100024: //RootNode
+    100026: Character_Modeular_Body_low
     100028: CharacterHead1Retop
     100030: CharacterHead2Retop
     100032: Characterhead3Retop
@@ -116,8 +116,8 @@ ModelImporter:
     400018: Cape_Tail_END2
     400020: Cape_Tail_JNT1
     400022: Cape_Tail_JNT2
-    400024: Character_Modeular_Body_low
-    400026: //RootNode
+    400024: //RootNode
+    400026: Character_Modeular_Body_low
     400028: CharacterHead1Retop
     400030: CharacterHead2Retop
     400032: Characterhead3Retop
@@ -222,6 +222,7 @@ ModelImporter:
     4300012: Alien_Skull_Bottle3
     4300014: Coke_Style_Bottle1
     4300016: Alien_Skull_Bottle
+    7400000: Take 001
     9500000: //RootNode
     13700000: Alien_Skull_Bottle
     13700002: Alien_Skull_Bottle3
@@ -260,7 +261,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -295,7 +324,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
