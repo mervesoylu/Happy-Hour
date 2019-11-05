@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,18 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &165456652 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 855985987591199773, guid: 160f1ff23ae4a014693a0e6de161fc08,
-    type: 3}
-  m_PrefabInstance: {fileID: 823535133}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &823535133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,27 +182,22 @@ PrefabInstance:
     - target: {fileID: 388765124000531297, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 388765124000531297, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 388765125869664949, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 388765125869664949, guid: 160f1ff23ae4a014693a0e6de161fc08,
         type: 3}
       propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 388765124660964558, guid: 160f1ff23ae4a014693a0e6de161fc08,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 160f1ff23ae4a014693a0e6de161fc08, type: 3}
@@ -345,38 +328,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &971302450 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 388765124406062261, guid: 160f1ff23ae4a014693a0e6de161fc08,
-    type: 3}
-  m_PrefabInstance: {fileID: 823535133}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1161318364 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 388765125814304694, guid: 160f1ff23ae4a014693a0e6de161fc08,
-    type: 3}
-  m_PrefabInstance: {fileID: 823535133}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1161318366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1161318364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6392613124a3c6042a887722f8a4efec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playButton: {fileID: 971302450}
-  _exitButton: {fileID: 165456652}
 --- !u!1 &1344584194
 GameObject:
   m_ObjectHideFlags: 0
