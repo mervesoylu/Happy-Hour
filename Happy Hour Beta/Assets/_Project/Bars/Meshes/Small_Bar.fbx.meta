@@ -50,6 +50,7 @@ ModelImporter:
     400042: Table_Top
     400044: Top_Bar_Door
     2100000: lambert1
+    2100002: lambert2
     2300000: polySurface24
     2300002: polySurface26
     2300004: polySurface28
@@ -63,6 +64,7 @@ ModelImporter:
     2300020: Round_Hatch
     2300022: Table_Base
     2300024: Table_Top
+    2300026: //RootNode
     3300000: polySurface24
     3300002: polySurface26
     3300004: polySurface28
@@ -76,6 +78,7 @@ ModelImporter:
     3300020: Round_Hatch
     3300022: Table_Base
     3300024: Table_Top
+    3300026: //RootNode
     4300000: Table_Base
     4300002: Round_Hatch
     4300004: Table_Top
@@ -89,6 +92,7 @@ ModelImporter:
     4300020: polySurface28
     4300022: polySurface26
     4300024: polySurface24
+    4300026: Small_Bar_LP
   externalObjects: {}
   materials:
     importMaterials: 1
