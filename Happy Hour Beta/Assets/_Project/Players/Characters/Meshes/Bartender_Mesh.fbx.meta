@@ -41,6 +41,7 @@ ModelImporter:
     4300000: Robot
     9500000: //RootNode
     13700000: Robot
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -53,7 +54,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -61,7 +63,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -108,7 +110,92 @@ ModelImporter:
   humanDescription:
     serializedVersion: 2
     human: []
-    skeleton: []
+    skeleton:
+    - name: Bartender_Mesh(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Robot
+      parentName: Bartender_Mesh(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CTRL
+      parentName: Bartender_Mesh(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso_CTRL
+      parentName: CTRL
+      position: {x: 0.0019848691, y: 0.4657413, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Shoulder_CTRL
+      parentName: CTRL
+      position: {x: 0.93361205, y: 0.68385184, z: 1.4210854e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Shoulder_CTRL
+      parentName: CTRL
+      position: {x: -0.82496315, y: 0.68385184, z: 1.4210854e-16}
+      rotation: {x: 0.008696051, y: -0, z: -0, w: 0.9999622}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_JNT
+      parentName: Bartender_Mesh(Clone)
+      position: {x: 0.0058531365, y: -0.003494071, z: 0}
+      rotation: {x: 0, y: 0, z: -0.70418626, w: 0.7100153}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chest_JNT
+      parentName: Root_JNT
+      position: {x: -0.4692513, y: -4.8849813e-17, z: 0}
+      rotation: {x: 0, y: 0, z: -0.0041217795, w: 0.99999154}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_JNT
+      parentName: Chest_JNT
+      position: {x: -0.13541028, y: -4.803266e-16, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Neck_JNT
+      position: {x: -0.89782894, y: -3.1869536e-15, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Shoulder_JNT
+      parentName: Chest_JNT
+      position: {x: -0.31494454, y: -0.54894006, z: 0.048721585}
+      rotation: {x: 0.35303965, y: -0.6126688, z: 0.6126688, w: 0.35303965}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Ball_Rotation_JNT
+      parentName: R_Shoulder_JNT
+      position: {x: -0.23927382, y: 0.024287445, z: -0.033965826}
+      rotation: {x: 0, y: 0, z: 0.008635475, w: 0.99996275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Elbow_JNT
+      parentName: R_Ball_Rotation_JNT
+      position: {x: -0.43346506, y: -1.4210854e-15, z: -8.5265126e-16}
+      rotation: {x: 9.436896e-16, y: -1.110223e-16, z: -0.27632672, w: 0.96106374}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand 1
+      parentName: R_Elbow_JNT
+      position: {x: -0.69434005, y: 1.441177e-17, z: 1.4210854e-16}
+      rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Shoulder_JNT
+      parentName: Chest_JNT
+      position: {x: -0.3157777, y: 0.53812975, z: 0.07237817}
+      rotation: {x: 0.6157157, y: 0.34769848, z: -0.34769848, w: 0.6157157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Ball_Rotation_JNT
+      parentName: L_Shoulder_JNT
+      position: {x: 0.18281807, y: -0.042121127, z: 0.0031973582}
+      rotation: {x: 0, y: 0, z: 0.008635475, w: 0.99996275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand
+      parentName: L_Ball_Rotation_JNT
+      position: {x: 0.38722023, y: 0.07693146, z: -0.18923937}
+      rotation: {x: 0, y: 0, z: -0.27632672, w: 0.96106374}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -118,7 +205,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2

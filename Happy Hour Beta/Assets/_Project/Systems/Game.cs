@@ -15,7 +15,7 @@ namespace Project
         [Inject] PauseMenuController _pauseController;
         [Inject] ReadyMenuController _readyUpMenu;
         [Inject] ScoreMoniter _scoreMoniter;
-        [Inject] BoardController _board;   
+        [Inject] BoardController _board;
         [Inject] SoundManager _soundManager;
         [Inject(Id = "numberOfRoundsPerGame")] int _numberOfRoundsPerGame;
         #endregion
@@ -26,14 +26,9 @@ namespace Project
             _pauseController.PauseGame();
         }
 
-        public void ResetRoundController()
-        {
-            _round.ResetRoundCounter();
-        }
-
         public void BeginRound()
         {
-            _round.Begin(_characters.Select(c => c.GetComponent<CharacterController>()).ToList());
+            _round.Begin();
         }
 
         /// <summary>
@@ -86,7 +81,13 @@ namespace Project
             _currentGameState.OnStateUpdate();
         }
 
-        public void SetupPlayers()
+        public void Setup()
+        {
+            setupPlayers();
+            _round.Setup(_characters.Select(c => c.GetComponent<CharacterController>()).ToList());
+        }
+
+        void setupPlayers()
         {
             _characters.Shuffle();
             for (int i = 0; i < _players.Count; i++)

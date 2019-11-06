@@ -28,6 +28,16 @@ namespace Project
         {
             _currentState = _defaultState;
         }
+
+        public void OnRoundBegan()
+        {
+            _currentState = _defaultState;
+        }
+
+        public void OnRoundEnded()
+        {
+            _currentState = _deactivatedState;
+        }
         #endregion
 
         #region ------------------------------Unity messages
@@ -38,10 +48,11 @@ namespace Project
 
         void Start()
         {
+            _deactivatedState = new DeactivatedCharacterInputState(_defaultSettings, _characterController);
             _defaultState = new DefaultCharacterInputState(_defaultSettings, _characterController);
             _happyHourState = new HappyHourCharacterInputState(_happyHourSettings, _characterController);
 
-            _currentState = _defaultState;
+            _currentState = _deactivatedState;
         }
 
         void Update()
@@ -53,6 +64,7 @@ namespace Project
         #region ------------------------------details
         #region --------------------state
         CharacterInputState _currentState;
+        CharacterInputState _deactivatedState;
         CharacterInputState _defaultState;
         CharacterInputState _happyHourState;
         #endregion

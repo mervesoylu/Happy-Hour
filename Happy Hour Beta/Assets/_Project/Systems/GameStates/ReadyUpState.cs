@@ -22,8 +22,7 @@ namespace Project
 
         public override void OnStateEnter()
         {
-            _game.ResetRoundController();
-            _game.SetupPlayers();
+            _game.Setup();
             _readiedControllers.Clear();
             _readyUpMenu.ResetUI();
             _readyUpMenu.Show();

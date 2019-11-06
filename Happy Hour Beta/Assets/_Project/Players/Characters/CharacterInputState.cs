@@ -51,6 +51,13 @@ namespace Project
         #endregion
     }
 
+    public class DeactivatedCharacterInputState : CharacterInputState
+    {
+        public DeactivatedCharacterInputState(CharacterSettings settings, CharacterController characterController) : base(settings, characterController) { }
+
+        public override void Update(XboxController controller) { }
+    }
+
     public class DefaultCharacterInputState : CharacterInputState
     {
         public DefaultCharacterInputState(CharacterSettings settings, CharacterController characterController) : base(settings, characterController) { }

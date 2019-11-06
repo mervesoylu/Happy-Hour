@@ -18,12 +18,19 @@ namespace Project
         #endregion
 
         #region ------------------------------interface
-        public void Begin(List<CharacterController> characters)
+        public void Setup(List<CharacterController> characters)
         {
             _characters = characters;
 
+            _characterInputs.Clear();
+            _characters.ForEach(ch => _characterInputs.Add(ch.GetComponent<CharacterInput>()));
+
+            _roundCounter = 0;
+        }
+
+        public void Begin()
+        {
             _roundCounter++;
-            StartCoroutine(nameof(spawnBarrelTracker));
 
             if (_roundCounter == 1)
                 _spawnPoints.Shuffle();
@@ -32,6 +39,9 @@ namespace Project
                 _characters[i].transform.position = _spawnPoints[i].position;
 
             _characters.ForEach(ch => ch.Restart());
+            _characterInputs.ForEach(ci => ci.OnRoundBegan());
+
+            StartCoroutine(nameof(spawnBarrelTracker));
         }
 
         /// <summary>
@@ -46,11 +56,6 @@ namespace Project
                 finishRound();
         }
 
-        public void ResetRoundCounter()
-        {
-            _roundCounter = 0;
-        }
-
         #endregion
 
         #region ------------------------------Unity messages
@@ -61,6 +66,8 @@ namespace Project
         #endregion
 
         #region ------------------------------details
+        List<CharacterInput> _characterInputs = new List<CharacterInput>();
+
         IEnumerator spawnBarrelTracker()
         {
             _spawnedBarrelsCounter = 0;
@@ -115,6 +122,7 @@ namespace Project
         {
             StopCoroutine(nameof(spawnBarrelTracker));
             stopHappyHour();
+            _characterInputs.ForEach(ci => ci.OnRoundEnded());
             _game.OnRoundFinished(_characters[0].PlayerID);
         }
 
