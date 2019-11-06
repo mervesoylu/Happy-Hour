@@ -123,7 +123,8 @@ namespace Project
             StopCoroutine(nameof(spawnBarrelTracker));
             stopHappyHour();
             _characterInputs.ForEach(ci => ci.OnRoundEnded());
-            _game.OnRoundFinished(_characters[0].PlayerID);
+            _game.OnRoundFinished(_characters.First(ch => ch.gameObject.activeSelf).PlayerID);
+           // _game.OnRoundFinished(_characters[0].PlayerID);
         }
 
         int _roundCounter;
