@@ -4,11 +4,57 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: RoolRodHolder
+    100004: StoolBase
+    100006: StoolRing
+    100008: StoolRingSupport
+    100010: StoolRingSupport1
+    100012: StoolRingSupport2
+    100014: StoolRingSupport3
+    100016: StoolRod
+    100018: StoolTop
     400000: //RootNode
+    400002: RoolRodHolder
+    400004: StoolBase
+    400006: StoolRing
+    400008: StoolRingSupport
+    400010: StoolRingSupport1
+    400012: StoolRingSupport2
+    400014: StoolRingSupport3
+    400016: StoolRod
+    400018: StoolTop
     2100000: lambert1
+    2100002: StingrayPBS2
     2300000: //RootNode
+    2300002: RoolRodHolder
+    2300004: StoolBase
+    2300006: StoolRing
+    2300008: StoolRingSupport
+    2300010: StoolRingSupport1
+    2300012: StoolRingSupport2
+    2300014: StoolRingSupport3
+    2300016: StoolRod
+    2300018: StoolTop
     3300000: //RootNode
+    3300002: RoolRodHolder
+    3300004: StoolBase
+    3300006: StoolRing
+    3300008: StoolRingSupport
+    3300010: StoolRingSupport1
+    3300012: StoolRingSupport2
+    3300014: StoolRingSupport3
+    3300016: StoolRod
+    3300018: StoolTop
     4300000: pCube5
+    4300002: StoolRod
+    4300004: StoolRing
+    4300006: StoolBase
+    4300008: RoolRodHolder
+    4300010: StoolRingSupport1
+    4300012: StoolRingSupport
+    4300014: StoolRingSupport3
+    4300016: StoolRingSupport2
+    4300018: StoolTop
   externalObjects: {}
   materials:
     importMaterials: 1
