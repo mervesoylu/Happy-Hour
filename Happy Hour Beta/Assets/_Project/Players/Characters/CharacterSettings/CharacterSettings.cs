@@ -14,6 +14,7 @@ namespace Project
         public ArcBottleController ArcBottle;
         public float StraightCoolDown;
         public float ArcCoolDown; 
+        public float ThrowDeadzoneDuration;
         public float Recovery;
         public float MaxDeviationAmount;
     } 

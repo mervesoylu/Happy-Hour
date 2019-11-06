@@ -24,9 +24,10 @@ namespace Project
             _characterController.Move(moveDirection);
 
             // throw
-            if (XCI.GetButton(XboxButton.RightBumper, controller) && _straightCoolDownTimer <= 0)
+            if (XCI.GetButton(XboxButton.RightBumper, controller) && _straightCoolDownTimer <= 0 && Time.time >= _straightThrowAvailableTime)
             {
                 _straightCoolDownTimer = _settings.StraightCoolDown;
+                _tossAvailableTime = Time.time + _settings.ThrowDeadzoneDuration;
                 _characterController.Throw();
             }
 
@@ -34,9 +35,10 @@ namespace Project
                 _straightCoolDownTimer -= Time.deltaTime;
 
             // toss
-            if (XCI.GetButton(XboxButton.LeftBumper, controller) && _arcCoolDownTimer <= 0)
+            if (XCI.GetButton(XboxButton.LeftBumper, controller) && _arcCoolDownTimer <= 0 && Time.time >= _tossAvailableTime)
             {
                 _arcCoolDownTimer = _settings.ArcCoolDown;
+                _straightThrowAvailableTime = Time.time + _settings.ThrowDeadzoneDuration;
                 _characterController.Toss();
             }
 
@@ -48,6 +50,8 @@ namespace Project
         #region ------------------------------details
         protected float _straightCoolDownTimer;
         protected float _arcCoolDownTimer;
+        protected float _straightThrowAvailableTime;
+        protected float _tossAvailableTime;
         #endregion
     }
 

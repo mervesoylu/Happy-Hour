@@ -21,5 +21,6 @@ MonoBehaviour:
     type: 3}
   StraightCoolDown: 1
   ArcCoolDown: 2
+  ThrowDeadzoneDuration: 0.5
   Recovery: 2
   MaxDeviationAmount: 0
