@@ -16,6 +16,7 @@ namespace Project
         [Inject] ReadyMenuController _readyUpMenu;
         [Inject] ScoreMoniter _scoreMoniter;
         [Inject] BoardController _board;
+        [Inject] EndgameMenuController _endgameMenu;
         [Inject] SoundManager _soundManager;
         [Inject(Id = "numberOfRoundsPerGame")] int _numberOfRoundsPerGame;
         #endregion
@@ -42,6 +43,7 @@ namespace Project
 
             //check for game over condition
             Player winner = _players.FirstOrDefault(p => p.Score == _numberOfRoundsPerGame);
+            _winner = winner;
 
             if (winner != null)
                 ChangeState(_eofGameState);
@@ -66,7 +68,7 @@ namespace Project
             _ingameState = new IngameState(this, _players, _scoreMoniter);
             _readyUpState = new ReadyUpState(this, _ingameState, _readyUpMenu, _readiedControllers);
             _eofRoundState = new EOFRoundState(this, _ingameState, _players, _board);
-            _eofGameState = new EOFGameState(this, _readyUpState);
+            _eofGameState = new EOFGameState(this, _readyUpState, _endgameMenu);
 
             ChangeState(_readyUpState);
         }
@@ -100,6 +102,8 @@ namespace Project
         }
 
         HashSet<int> _readiedControllers = new HashSet<int>();
+        Player _winner;
+        public Player Winner { get {return _winner; } }
         #endregion
     }
 }

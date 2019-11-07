@@ -8,17 +8,19 @@ namespace Project
     {
         Game _game;
         GameState _readyUpState;
+        EndgameMenuController _endgameMenu;
 
-
-        public EOFGameState(Game game, GameState readyUpState)
+        public EOFGameState(Game game, GameState readyUpState, EndgameMenuController endgameMenu)
         {
             _game = game;
             _readyUpState = readyUpState;
+            _endgameMenu = endgameMenu;
         }
 
         public override void OnStateEnter()
         {
             Debug.Log("Show endgame menu!");
+            _endgameMenu.Show(_game.Winner);
         }
 
         public override void OnStateUpdate()
@@ -30,6 +32,7 @@ namespace Project
         public override void OnStateExit()
         {
             Debug.Log("Hide endgame menu!");
+            _endgameMenu.Hide();
         }
     }
 }

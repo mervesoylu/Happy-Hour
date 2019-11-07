@@ -13,6 +13,7 @@ namespace Project
       [SerializeField] GameObject _pauseControllerPrefab;
       [SerializeField] GameObject _boardUIPrefab;
       [SerializeField] GameObject _readyMenuPrefab;
+      [SerializeField] GameObject _endgameMenuPrefab;
       [SerializeField] ScoreMoniter _scoreMoniter;
       [SerializeField] Round _round;
       [SerializeField] CharacterSettings _defaultCharacterSettings;
@@ -27,6 +28,7 @@ namespace Project
          Container.Bind<PauseMenuController>().FromComponentInNewPrefab(_pauseControllerPrefab).AsSingle();
          Container.Bind<BoardController>().FromComponentInNewPrefab(_boardUIPrefab).AsSingle();
          Container.Bind<ReadyMenuController>().FromComponentInNewPrefab(_readyMenuPrefab).AsSingle();
+         Container.Bind<EndgameMenuController>().FromComponentInNewPrefab(_endgameMenuPrefab).AsSingle();
          Container.Bind<SoundManager>().FromComponentInHierarchy().AsSingle();
          Container.BindInterfacesAndSelfTo<Game>().AsSingle();
          Container.BindInstance(_numberOfRoundsPerGame).WithId("numberOfRoundsPerGame");

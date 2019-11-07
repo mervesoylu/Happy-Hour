@@ -172,13 +172,14 @@ GameObject:
   - component: {fileID: 6323828139589412006}
   - component: {fileID: 6323828139589412007}
   - component: {fileID: 6323828139589412000}
+  - component: {fileID: 6029739095312749423}
   m_Layer: 5
-  m_Name: WinnerPanel
+  m_Name: EndgameMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6323828139589412005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -259,6 +260,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6029739095312749423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323828139589412001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64858b4b695160e4ea6bc120050a5246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _winnerID: {fileID: 6323828141188058226}
 --- !u!1 &6323828140126691587
 GameObject:
   m_ObjectHideFlags: 0
