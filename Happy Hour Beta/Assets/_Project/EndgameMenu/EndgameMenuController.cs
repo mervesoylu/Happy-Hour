@@ -10,7 +10,7 @@ namespace Project
 
         public void Show(Player winner)
         {
-            _winnerID.text = string.Format("Player {0}", winner.Controller);
+            _winnerID.text = string.Format("{0} Player", winner.Controller);
             gameObject.SetActive(true);
         }
 
