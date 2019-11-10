@@ -15,6 +15,7 @@ namespace Project
         List<CharacterController> _characters;
         [SerializeField] Bar _bar;
         [SerializeField] TextMeshProUGUI _happyHourTextUI;
+        [SerializeField] GameObject _confetti;
         #endregion
 
         #region ------------------------------interface
@@ -62,6 +63,7 @@ namespace Project
         void Start()
         {
             _happyHourTextUI.gameObject.SetActive(false);
+            _confetti.gameObject.SetActive(false);
         }
         #endregion
 
@@ -99,6 +101,7 @@ namespace Project
         void runHappyHour()
         {
             _happyHourTextUI.gameObject.SetActive(true);
+            _confetti.gameObject.SetActive(true);
 
             foreach (var character in _characters)
             {
@@ -110,6 +113,7 @@ namespace Project
         void stopHappyHour()
         {
             _happyHourTextUI.gameObject.SetActive(false);
+            _confetti.gameObject.SetActive(false);
 
             foreach (var character in _characters)
             {

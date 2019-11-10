@@ -4486,6 +4486,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 431394245}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &453870050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7156564680333191487, guid: 4860fed2b206cb6448371e83e04b65fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1684298690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &460568118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6023,6 +6029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bar: {fileID: 45272252}
   _happyHourTextUI: {fileID: 268264706}
+  _confetti: {fileID: 453870050}
   _barrelSpawnInterval: 3
   _numberOfBarrelsToInitiateHappuHour: 5
   _happyHourDuration: 5

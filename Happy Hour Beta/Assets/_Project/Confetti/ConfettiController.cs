@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ConfettiController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    GameObject _confetti;
+
+    void Disabled()
     {
-        
+        _confetti.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Enabled()
     {
-        
+        _confetti.SetActive(true);
     }
+
 }
