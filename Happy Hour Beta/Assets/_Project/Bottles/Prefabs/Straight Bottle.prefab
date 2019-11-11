@@ -43,7 +43,7 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 245f0ec07418c38468009e96f0e8308f, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 65a1ba5fbd0ac40408ac7b18d64505c9, type: 2}
+  - {fileID: 7400000, guid: 245f0ec07418c38468009e96f0e8308f, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 8714905487219830061}
   m_Layer: 0
   m_Name: Straight Bottle
-  m_TagString: Untagged
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
