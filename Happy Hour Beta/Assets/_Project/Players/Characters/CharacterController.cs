@@ -14,6 +14,7 @@ namespace Project
         [Inject] Round _round;
         [Inject] SoundManager _soundManager;
         [SerializeField] AudioClip _deathAudioClip;
+        Animator _animator;
 
         public List<GameObject> hps;
         Rigidbody _rigidbody;
@@ -129,6 +130,7 @@ namespace Project
 
             _colliders = new List<Collider>(GetComponentsInChildren<Collider>(false));
             _material = findMainMaterial();
+            _animator = GetComponentInChildren<Animator>();
         }
 
         void Start()
@@ -141,6 +143,11 @@ namespace Project
         void OnEnable()
         {
             makeVincible();
+        }
+
+        void Update()
+        {
+            _animator.SetBool("isMoving", _rigidbody.velocity != Vector3.zero);
         }
         #endregion
 
