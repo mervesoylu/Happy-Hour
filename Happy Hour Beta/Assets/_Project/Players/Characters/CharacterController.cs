@@ -100,6 +100,7 @@ namespace Project
         public int PlayerID { get; set; }
 
         public Sprite Sprite; // can't be a property, because it needs to show up in the inspector.
+        public Color Color;
 
         public void Restart()
         {
