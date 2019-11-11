@@ -15,9 +15,9 @@ MonoBehaviour:
   Speed: 11
   StunDuration: 2
   ImmobilityDuration: 0.2
-  StraightBottle: {fileID: 6753276746239517203, guid: 4fa35c5f5148bed4d8d9fd7e02934056,
+  StraightBottle: {fileID: 7664131586249177291, guid: dfc11799eb99a474db4fcf5dfe723813,
     type: 3}
-  ArcBottle: {fileID: 9152733204380273351, guid: c894b9fee4efd624290d4e7ff6e909e5,
+  ArcBottle: {fileID: 2902846125289569875, guid: fb2af98f74c1f384cb7967dcb8171159,
     type: 3}
   StraightCoolDown: 0.2
   ArcCoolDown: 1
