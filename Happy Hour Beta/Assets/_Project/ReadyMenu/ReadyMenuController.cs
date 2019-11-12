@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class ReadyMenuController : MonoBehaviour
 {
+    [SerializeField] Color _defaultColor;
+    [SerializeField] Color _highlightedColor;
     [SerializeField] Image[] _characterIcons;
 
     public void Ready(int controllerID)
@@ -13,14 +15,14 @@ public class ReadyMenuController : MonoBehaviour
             return;
         }
 
-        _characterIcons[controllerID - 1].color = Color.green;
+        _characterIcons[controllerID - 1].color = _highlightedColor;
     }
 
     public void ResetUI()
     {
         for (int i = 0; i < 4; i++)
         {
-            _characterIcons[i].color = Color.white;
+            _characterIcons[i].color = _defaultColor;
         }
     }
 
