@@ -76,7 +76,7 @@ namespace Project
 
             while (true)
             {
-                yield return new WaitForSeconds(_barrelSpawnInterval);
+                yield return new WaitForSeconds(_barrelSpawnInterval + _bar.LaunchDuration);
                 spawnBarrel();
                 if (_spawnedBarrelsCounter == _numberOfBarrelsToInitiateHappuHour)
                 {
