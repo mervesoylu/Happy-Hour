@@ -2909,7 +2909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _happyHourIntensity: 1
   _defaultIntensity: 0
-  _transitionDuration: 0.4
+  _transitionDuration: 1
 --- !u!1 &453870050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7156564680333191487, guid: 4860fed2b206cb6448371e83e04b65fb,
