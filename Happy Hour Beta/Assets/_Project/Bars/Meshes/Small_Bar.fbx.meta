@@ -26,6 +26,22 @@ ModelImporter:
     100040: Table_Base
     100042: Table_Top
     100044: Top_Bar_Door
+    100046: Barrel_2
+    100048: base_low
+    100050: Door1
+    100052: Door10
+    100054: Door2
+    100056: Door3
+    100058: Door4
+    100060: Door5
+    100062: Door6
+    100064: Door7
+    100066: Door8
+    100068: Door9
+    100070: Door_low
+    100072: Light_low
+    100074: Small_Bar_LP
+    100076: Wood_low
     400000: polySurface23
     400002: polySurface24
     400004: polySurface25
@@ -49,8 +65,26 @@ ModelImporter:
     400040: Table_Base
     400042: Table_Top
     400044: Top_Bar_Door
+    400046: Barrel_2
+    400048: base_low
+    400050: Door1
+    400052: Door10
+    400054: Door2
+    400056: Door3
+    400058: Door4
+    400060: Door5
+    400062: Door6
+    400064: Door7
+    400066: Door8
+    400068: Door9
+    400070: Door_low
+    400072: Light_low
+    400074: Small_Bar_LP
+    400076: Wood_low
     2100000: lambert1
     2100002: lambert2
+    2100004: barrel
+    2100006: Barrel_2_low_lambert14SG1
     2300000: polySurface24
     2300002: polySurface26
     2300004: polySurface28
@@ -65,6 +99,20 @@ ModelImporter:
     2300022: Table_Base
     2300024: Table_Top
     2300026: //RootNode
+    2300028: Barrel_2
+    2300030: base_low
+    2300032: Door1
+    2300034: Door10
+    2300036: Door2
+    2300038: Door3
+    2300040: Door4
+    2300042: Door5
+    2300044: Door6
+    2300046: Door7
+    2300048: Door8
+    2300050: Door9
+    2300052: Light_low
+    2300054: Wood_low
     3300000: polySurface24
     3300002: polySurface26
     3300004: polySurface28
@@ -79,6 +127,20 @@ ModelImporter:
     3300022: Table_Base
     3300024: Table_Top
     3300026: //RootNode
+    3300028: Barrel_2
+    3300030: base_low
+    3300032: Door1
+    3300034: Door10
+    3300036: Door2
+    3300038: Door3
+    3300040: Door4
+    3300042: Door5
+    3300044: Door6
+    3300046: Door7
+    3300048: Door8
+    3300050: Door9
+    3300052: Light_low
+    3300054: Wood_low
     4300000: Table_Base
     4300002: Round_Hatch
     4300004: Table_Top
@@ -93,6 +155,20 @@ ModelImporter:
     4300022: polySurface26
     4300024: polySurface24
     4300026: Small_Bar_LP
+    4300028: Light_low
+    4300030: Door1
+    4300032: Door2
+    4300034: Door3
+    4300036: Door4
+    4300038: Door5
+    4300040: Door6
+    4300042: Door7
+    4300044: Door8
+    4300046: Door9
+    4300048: Door10
+    4300050: Wood_low
+    4300052: base_low
+    4300054: Barrel_2
   externalObjects: {}
   materials:
     importMaterials: 1

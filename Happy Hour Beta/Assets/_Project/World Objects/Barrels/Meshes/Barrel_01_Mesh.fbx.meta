@@ -14,6 +14,7 @@ ModelImporter:
     400006: pCylinder5
     400008: pCylinder6
     2100000: lambert1
+    2100002: lambert3
     2300000: //RootNode
     2300002: pCube15
     2300004: pCylinder4
@@ -29,6 +30,8 @@ ModelImporter:
     4300004: pCylinder6
     4300006: pCylinder5
     4300008: pCube15
+    4300010: B_Edge_LOW1
+    4300012: Ring_Low
   externalObjects: {}
   materials:
     importMaterials: 1
