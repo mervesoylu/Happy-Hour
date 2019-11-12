@@ -148,9 +148,25 @@ namespace Project
 
         void Update()
         {
-            _animator.SetFloat("Horizontal", _rigidbody.velocity.x);
-            _animator.SetFloat("Vertical", _rigidbody.velocity.z);
+            if (_rigidbody.velocity == Vector3.zero)
+            {
+                _animator.SetFloat("Horizontal", 0);
+                _animator.SetFloat("Vertical", 0);
+                return;
+            }
+
+            Quaternion relativeRotation = Quaternion.FromToRotation(_transform.forward, _rigidbody.velocity);
+
+            Vector3 rotatedAxis = relativeRotation * Vector3.forward;
+
+            if (relativeRotation.eulerAngles.y > 90 + forwardBackwardThreshold && relativeRotation.eulerAngles.y < 270 - forwardBackwardThreshold)
+                rotatedAxis.x = -rotatedAxis.x;
+
+            _animator.SetFloat("Vertical", rotatedAxis.z);
+            _animator.SetFloat("Horizontal", rotatedAxis.x);
+
         }
+        [SerializeField] float forwardBackwardThreshold;
         #endregion
 
         #region ------------------------------details
