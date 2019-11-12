@@ -21,6 +21,8 @@ public class Bar : MonoBehaviour
                 side++;
         }
 
+        _previousSide = side;
+
         float unitCircle = (360f / _sides * side) * Mathf.Deg2Rad;
         Vector3 launchDirection = new Vector3(Mathf.Cos(unitCircle), 0f, Mathf.Sin(unitCircle));
         Vector3 spawnPosition = _barOrigin.position + _barRadius * launchDirection;
