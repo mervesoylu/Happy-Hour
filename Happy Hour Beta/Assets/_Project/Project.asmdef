@@ -3,7 +3,8 @@
     "references": [
         "Zenject",
         "XInput",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "Unity.Postprocessing.Runtime"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

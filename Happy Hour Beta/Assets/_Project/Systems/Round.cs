@@ -12,6 +12,7 @@ namespace Project
         #region ------------------------------dependencies
         [Inject] Game _game;
         [Inject] List<Transform> _spawnPoints;
+        [Inject] PostProcessVolumeController _postProcessVolumeController;
         List<CharacterController> _characters;
         [SerializeField] Bar _bar;
         [SerializeField] TextMeshProUGUI _happyHourTextUI;
@@ -32,6 +33,7 @@ namespace Project
         public void Begin()
         {
             _roundCounter++;
+            _postProcessVolumeController.OnRoundBegan();
 
             if (_roundCounter == 1)
                 _spawnPoints.Shuffle();
@@ -102,6 +104,7 @@ namespace Project
         {
             _happyHourTextUI.gameObject.SetActive(true);
             _confetti.gameObject.SetActive(true);
+            _postProcessVolumeController.OnHappyHourRan();
 
             foreach (var character in _characters)
             {
@@ -114,6 +117,7 @@ namespace Project
         {
             _happyHourTextUI.gameObject.SetActive(false);
             _confetti.gameObject.SetActive(false);
+            _postProcessVolumeController.OnHappyHourStopped();
 
             foreach (var character in _characters)
             {
@@ -128,7 +132,7 @@ namespace Project
             stopHappyHour();
             _characterInputs.ForEach(ci => ci.OnRoundEnded());
             _game.OnRoundFinished(_characters.First(ch => ch.gameObject.activeSelf).PlayerID);
-           // _game.OnRoundFinished(_characters[0].PlayerID);
+            // _game.OnRoundFinished(_characters[0].PlayerID);
         }
 
         int _roundCounter;
