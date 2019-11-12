@@ -34,6 +34,7 @@ namespace Project
             if (_settings.StraightCoolDown > 0)
                 _straightCoolDownTimer -= Time.deltaTime;
 
+
             // toss
             if (XCI.GetButton(XboxButton.LeftBumper, controller) && _arcCoolDownTimer <= 0 && Time.time >= _tossAvailableTime)
             {

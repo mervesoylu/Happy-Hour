@@ -50,6 +50,7 @@ namespace Project
 
             StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
             bottle.Fly(deviateDirection(_facing), _colliders);
+            _animator.SetTrigger("isSThrow");
         }
 
         public void Toss()
@@ -59,12 +60,16 @@ namespace Project
 
             var bottle = Instantiate(_currentSettings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
             bottle.Fly(_facing, _colliders);
+            _animator.SetTrigger("isAThrow");
+
         }
 
         public void TakeDamage()
         {
             if (_isInvincible)
                 return;
+
+            _animator.SetBool("isHit", true);
 
             if (_hp > 0)
             {
@@ -155,6 +160,7 @@ namespace Project
                 return;
             }
 
+
             Quaternion relativeRotation = Quaternion.FromToRotation(_transform.forward, _rigidbody.velocity);
 
             Vector3 rotatedAxis = relativeRotation * Vector3.forward;
@@ -162,8 +168,12 @@ namespace Project
             if (relativeRotation.eulerAngles.y > 90 + forwardBackwardThreshold && relativeRotation.eulerAngles.y < 270 - forwardBackwardThreshold)
                 rotatedAxis.x = -rotatedAxis.x;
 
+
             _animator.SetFloat("Vertical", rotatedAxis.z);
             _animator.SetFloat("Horizontal", rotatedAxis.x);
+
+
+            _animator.SetBool("isHit", false);
 
         }
         [SerializeField] float forwardBackwardThreshold;
