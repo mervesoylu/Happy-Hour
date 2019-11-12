@@ -99,6 +99,7 @@ namespace Project
         {
             _isImmobilised = true;
             _rigidbody.velocity = Vector3.zero;
+            _animator.SetBool("isStun", true);
             Invoke(nameof(removeImmobility), _currentSettings.StunDuration);
         }
 
@@ -174,7 +175,6 @@ namespace Project
 
 
             _animator.SetBool("isHit", false);
-
         }
         [SerializeField] float forwardBackwardThreshold;
         #endregion
@@ -194,6 +194,7 @@ namespace Project
         void removeImmobility()
         {
             _isImmobilised = false;
+            _animator.SetBool("isStun", false);
         }
 
         void die()
