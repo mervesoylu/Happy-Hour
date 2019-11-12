@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4619255716360329316}
   - component: {fileID: 4619255716359232164}
   - component: {fileID: 2902846125289569875}
-  - component: {fileID: 6921711549399059722}
   - component: {fileID: 1245575287580729495}
   - component: {fileID: 3145811576426003281}
+  - component: {fileID: 8218672148717348303}
   m_Layer: 0
   m_Name: Bottle_Stun_Prefab
   m_TagString: Bottle
@@ -123,19 +123,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &6921711549399059722
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4619255716361421924}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.23287708, y: 0.8059445, z: 0.51361865}
-  m_Center: {x: 0, y: -0.00116992, z: 0.006087631}
 --- !u!54 &1245575287580729495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,3 +152,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _containerSource: 2
+--- !u!136 &8218672148717348303
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619255716361421924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.39889732
+  m_Height: 1.249698
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.018240154, z: -0.00000011920929}
