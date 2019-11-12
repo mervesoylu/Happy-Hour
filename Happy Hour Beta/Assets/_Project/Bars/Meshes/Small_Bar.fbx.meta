@@ -169,6 +169,8 @@ ModelImporter:
     4300050: Wood_low
     4300052: base_low
     4300054: Barrel_2
+    7400000: Take 001
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -246,10 +248,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

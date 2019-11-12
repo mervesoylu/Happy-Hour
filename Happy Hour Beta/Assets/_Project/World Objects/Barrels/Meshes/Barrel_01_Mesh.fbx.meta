@@ -32,6 +32,7 @@ ModelImporter:
     4300008: pCube15
     4300010: B_Edge_LOW1
     4300012: Ring_Low
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -112,7 +113,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
