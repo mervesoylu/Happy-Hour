@@ -224,7 +224,9 @@ MonoBehaviour:
     type: 3}
   _barOrigin: {fileID: 997547436276729995}
   _barRadius: 4
-  _barHatches: 8
+  _sides: 8
+  _rotationDuration: 2
+  _launchInterval: 1.5
 --- !u!4 &45272253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400038, guid: adb33e724349f004a8ae3823f187492e,
