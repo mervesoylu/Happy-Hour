@@ -305,6 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _barrelPrefab: {fileID: 1530959284726475015, guid: d19e0b3ccd22e1b4eaab366fd3ca7ce9,
     type: 3}
+  _happyAnimationAnimation: {fileID: 45272254}
+  _bartenderAnimator: {fileID: 79141870}
   _barOrigin: {fileID: 997547436276729995}
   _barRadius: 4
   _sides: 8
@@ -313,6 +315,12 @@ MonoBehaviour:
 --- !u!4 &45272253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400038, guid: adb33e724349f004a8ae3823f187492e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1409331594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &45272254 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 11100000, guid: adb33e724349f004a8ae3823f187492e,
     type: 3}
   m_PrefabInstance: {fileID: 1409331594}
   m_PrefabAsset: {fileID: 0}
@@ -406,13 +414,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 8.8, z: 49.399998}
   m_Center: {x: 0, y: 3.9, z: 0}
+--- !u!95 &79141870 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 3112d71e8bbbe094e8de5809e2303508,
+    type: 3}
+  m_PrefabInstance: {fileID: 1793262066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &88313390
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1950
+  m_Name: pb_Mesh-1958
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2922,7 +2936,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1320
+  m_Name: pb_Mesh-1328
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3082,7 +3096,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3050
+  m_Name: pb_Mesh-3058
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3817,9 +3831,9 @@ MonoBehaviour:
   _bar: {fileID: 45272252}
   _happyHourTextUI: {fileID: 268264706}
   _confetti: {fileID: 453870050}
-  _barrelSpawnInterval: 2.5
-  _numberOfBarrelsToInitiateHappuHour: 4
-  _happyHourDuration: 5
+  _barrelSpawnInterval: 2
+  _numberOfBarrelsToInitiateHappuHour: 3
+  _happyHourDuration: 7
 --- !u!1001 &724207798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6135,6 +6149,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a759503216cbae14d96afc419a300735, type: 2}
+    - target: {fileID: 11100000, guid: adb33e724349f004a8ae3823f187492e, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adb33e724349f004a8ae3823f187492e, type: 3}
 --- !u!43 &1413381827
@@ -6143,7 +6161,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2536
+  m_Name: pb_Mesh-2544
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

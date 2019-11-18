@@ -37,8 +37,10 @@ public class Bar : MonoBehaviour
     public void OnHappyHourRan()
     {
         _happyAnimationAnimation.Play();
+        _bartenderAnimator.SetTrigger("slam");
     }
     [SerializeField] Animation _happyAnimationAnimation;
+    [SerializeField] Animator _bartenderAnimator;
     #endregion
 
     #region --------------------------unity messages
