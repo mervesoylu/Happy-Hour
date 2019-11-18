@@ -886,7 +886,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2502
+  m_Name: pb_Mesh-4722
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4897,8 +4897,8 @@ MonoBehaviour:
   _happyHourTextUI: {fileID: 268264706}
   _confetti: {fileID: 453870050}
   _barrelSpawnInterval: 2
-  _numberOfBarrelsToInitiateHappuHour: 3
-  _happyHourDuration: 7
+  _numberOfBarrelsToInitiateHappuHour: 4
+  _happyHourDuration: 6
 --- !u!1001 &724207798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6333,7 +6333,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3020
+  m_Name: pb_Mesh-5194
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -9836,7 +9836,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1930
+  m_Name: pb_Mesh-4150
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -10863,7 +10863,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.9528302, g: 0.5365809, b: 0.23820755, a: 1}
-  m_Intensity: 1500
+  m_Intensity: 2500
   m_Range: 105.7
   m_SpotAngle: 52.5
   m_CookieSize: 10
@@ -11033,7 +11033,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1288
+  m_Name: pb_Mesh-3600
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
