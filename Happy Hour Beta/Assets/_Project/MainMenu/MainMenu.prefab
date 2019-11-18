@@ -662,6 +662,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playButton: {fileID: 388765124406062261}
   _exitButton: {fileID: 855985987591199773}
+  _controlsButton: {fileID: 4769837653171082549}
+  _creditsButton: {fileID: 6395532053878230596}
+  _mainMenuPanel: {fileID: 388765124551163824}
+  _controlsPanel: {fileID: 390473141}
+  _creditsPanel: {fileID: 770606319}
 --- !u!1 &4493984915812533994
 GameObject:
   m_ObjectHideFlags: 0
