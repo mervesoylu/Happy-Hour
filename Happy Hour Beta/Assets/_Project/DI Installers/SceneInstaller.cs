@@ -15,6 +15,7 @@ namespace Project
         [SerializeField] GameObject _readyMenuPrefab;
         [SerializeField] GameObject _endgameMenuPrefab;
         [SerializeField] ScoreMoniter _scoreMoniter;
+        [SerializeField] CountDownController _countDownController;
         [SerializeField] Round _round;
         [SerializeField] CharacterSettings _defaultCharacterSettings;
         [SerializeField] CharacterSettings _happyHourCharacterSettings;
@@ -22,7 +23,7 @@ namespace Project
 
         public override void InstallBindings()
         {
-            Container.BindInstances(_players, _characters, _spawnPoints, _round, _scoreMoniter);
+            Container.BindInstances(_players, _characters, _spawnPoints, _round, _scoreMoniter, _countDownController);
             Container.Bind<CharacterSettings>().WithId("defaultCharacterSettings").FromNewScriptableObject(_defaultCharacterSettings).AsTransient(); // could be AsSingle() since all characters share the same settings, but in case in the furture we wanna have individual settings per character.
             Container.Bind<CharacterSettings>().WithId("happyHourCharacterSettings").FromNewScriptableObject(_happyHourCharacterSettings).AsTransient(); // could be AsSingle() since all characters share the same settings, but in case in the furture we wanna have individual settings per character.
             Container.Bind<PauseMenuController>().FromComponentInNewPrefab(_pauseControllerPrefab).AsSingle();

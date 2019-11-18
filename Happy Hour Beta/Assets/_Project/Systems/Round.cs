@@ -13,6 +13,7 @@ namespace Project
         [Inject] Game _game;
         [Inject] List<Transform> _spawnPoints;
         [Inject] PostProcessVolumeController _postProcessVolumeController;
+        [Inject] CountDownController _countDownController;
         List<CharacterController> _characters;
         [SerializeField] Bar _bar;
         [SerializeField] TextMeshProUGUI _happyHourTextUI;
@@ -28,10 +29,18 @@ namespace Project
             _characters.ForEach(ch => _characterInputs.Add(ch.GetComponent<CharacterInput>()));
 
             _roundCounter = 0;
+
         }
 
         public void Begin()
         {
+            StartCoroutine(nameof(beginAfterCountDown));
+        }
+
+        IEnumerator beginAfterCountDown()
+        {
+            _countDownController.CountDown();
+            yield return new WaitForSeconds(3);
             _roundCounter++;
             _postProcessVolumeController.OnRoundBegan();
 
@@ -67,6 +76,7 @@ namespace Project
             _happyHourTextUI.gameObject.SetActive(false);
             _confetti.gameObject.SetActive(false);
         }
+
         #endregion
 
         #region ------------------------------details

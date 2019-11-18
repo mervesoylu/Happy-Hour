@@ -200,6 +200,13 @@ namespace Project
         void die()
         {
             _soundManager.PlayAudioClip(_deathAudioClip);
+            _animator.SetBool("isDead", true);
+            Invoke(nameof(dieOverTime), deadTime);
+        }
+        float deadTime = 3.0f;
+
+        void dieOverTime()
+        {
             gameObject.SetActive(false);
             _round.OnPlayerDied(PlayerID);
         }
