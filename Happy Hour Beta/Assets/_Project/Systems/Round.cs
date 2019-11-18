@@ -105,6 +105,7 @@ namespace Project
             _happyHourTextUI.gameObject.SetActive(true);
             _confetti.gameObject.SetActive(true);
             _postProcessVolumeController.OnHappyHourRan();
+            _bar.OnHappyHourRan();
 
             foreach (var character in _characters)
             {

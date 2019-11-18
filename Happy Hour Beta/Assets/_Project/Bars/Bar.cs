@@ -33,6 +33,12 @@ public class Bar : MonoBehaviour
         StartCoroutine(SpawnBarrelCoroutine(initialRotation, targetRotation, spawnPosition, launchDirection));
     }
     int _previousSide = 0;
+
+    public void OnHappyHourRan()
+    {
+        _happyAnimationAnimation.Play();
+    }
+    [SerializeField] Animation _happyAnimationAnimation;
     #endregion
 
     #region --------------------------unity messages
