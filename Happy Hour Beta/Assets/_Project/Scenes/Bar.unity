@@ -3756,7 +3756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e305a149d7018c64a81bde48046e51aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _happyHourIntensity: 1
+  _happyHourIntensity: 0.6
   _defaultIntensity: 0
   _transitionDuration: 1
 --- !u!1 &453870050 stripped
