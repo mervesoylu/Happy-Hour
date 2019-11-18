@@ -16,7 +16,7 @@ namespace Project
         {
             for (int i = 0; i < players.Count; i++)
             {
-                _playerImages[i].sprite = players[i].Sprite;
+                _playerImages[i].sprite = players[i].CharacterSprites;
                 _playerImages[i].GetComponentInChildren<TextMeshProUGUI>().text = players[i].Score.ToString();
             }
 

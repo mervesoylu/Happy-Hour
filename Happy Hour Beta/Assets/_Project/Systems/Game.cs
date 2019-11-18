@@ -97,7 +97,7 @@ namespace Project
             {
                 _characters[i].GetComponent<CharacterInput>().SetXBoxController(_players[i].Controller);
                 _characters[i].GetComponent<CharacterController>().PlayerID = (int)_players[i].Controller;
-                _players[i].Sprite = _characters[i].GetComponent<CharacterController>().Sprite;
+                _players[i].CharacterSprites = _characters[i].GetComponent<CharacterController>().Sprite;
                 _players[i].Color = _characters[i].GetComponent<CharacterController>().Color;
                 _players[i].Score = 0;
             }
