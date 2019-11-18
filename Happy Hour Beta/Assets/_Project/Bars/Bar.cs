@@ -41,11 +41,11 @@ public class Bar : MonoBehaviour
         _transform = transform;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        { SpawnBarrel(); }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    { SpawnBarrel(); }
+    //}
     #endregion
 
     #region --------------------------details
@@ -68,7 +68,7 @@ public class Bar : MonoBehaviour
 
         yield return new WaitForSeconds(_launchInterval);
 
-        Instantiate(_barrelPrefab, spawnPosition, Quaternion.LookRotation(Vector3.up, Vector3.Cross(Vector3.up, launchDirection))).Roll(launchDirection);
+        Instantiate(_barrelPrefab, spawnPosition, Quaternion.LookRotation(launchDirection, Vector3.up)).Roll(launchDirection);
     }
 
     [SerializeField] Transform _barOrigin;
