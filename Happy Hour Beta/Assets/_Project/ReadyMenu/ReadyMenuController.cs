@@ -5,7 +5,8 @@ public class ReadyMenuController : MonoBehaviour
 {
     [SerializeField] Color _defaultColor;
     [SerializeField] Color _highlightedColor;
-    [SerializeField] Image[] _characterIcons;
+    [SerializeField] Image[] _characterFrames;
+    [SerializeField] Image[] _characterNames;
 
     public void Ready(int controllerID)
     {
@@ -15,14 +16,16 @@ public class ReadyMenuController : MonoBehaviour
             return;
         }
 
-        _characterIcons[controllerID - 1].color = _highlightedColor;
+        _characterFrames[controllerID - 1].color = _highlightedColor;
+        _characterNames[controllerID - 1].color = _highlightedColor;
     }
 
     public void ResetUI()
     {
         for (int i = 0; i < 4; i++)
         {
-            _characterIcons[i].color = _defaultColor;
+            _characterFrames[i].color = _defaultColor;
+            _characterNames[i].color = _defaultColor;
         }
     }
 
