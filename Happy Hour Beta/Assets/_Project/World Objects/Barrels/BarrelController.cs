@@ -7,7 +7,7 @@ public class BarrelController : MonoBehaviour
     #region ----------------------------dependencies
     Rigidbody _rigidbody;
     [SerializeField] ParticleSystem _barrelBreak;
-    [SerializeField] GameObject _dust;
+    [SerializeField] ParticleSystem _dust;
     public Renderer _rend;
     #endregion
 
@@ -15,7 +15,7 @@ public class BarrelController : MonoBehaviour
     public void Roll(Vector3 direction)
     {
         _rigidbody.AddForce(direction * _speed, ForceMode.VelocityChange);
-        _dust.SetActive(true);
+        _dust.Play();
     }
     #endregion
 
@@ -42,9 +42,11 @@ public class BarrelController : MonoBehaviour
         {
             other.GetComponent<Project.CharacterController>().TakeDamage();
             _barrelBreak.Play();
+            _dust.Stop();
         }
 
         _rend.enabled = false;
+        _dust.Stop();
         _barrelBreak.Play();
         Invoke(nameof(Break), _break);
     }

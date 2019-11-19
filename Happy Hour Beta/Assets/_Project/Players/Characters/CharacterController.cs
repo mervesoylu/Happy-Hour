@@ -25,7 +25,7 @@ namespace Project
         #region ------------------------------interface
         public void Move(Vector3 direction)
         {
-            if (_isImmobilised)
+            if (_isImmobilised || _isDead)
                 return;
 
             var velocity = direction * _currentSettings.Speed;
@@ -36,7 +36,7 @@ namespace Project
 
         public void Aim(Vector3 direction)
         {
-            if (_isImmobilised)
+            if (_isImmobilised || _isDead)
                 return;
 
             if (direction == Vector3.zero)
@@ -48,7 +48,7 @@ namespace Project
 
         public void Throw()
         {
-            if (_isImmobilised)
+            if (_isImmobilised || _isDead)
                 return;
 
             StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
@@ -58,7 +58,7 @@ namespace Project
 
         public void Toss()
         {
-            if (_isImmobilised)
+            if (_isImmobilised || _isDead)
                 return;
 
             var bottle = Instantiate(_currentSettings.ArcBottle, _transform.position, Quaternion.identity).GetComponent<ArcBottleController>();
@@ -78,12 +78,16 @@ namespace Project
             {
                 _hp--;
                 hps[_hp].SetActive(false);
-                makeInvincible();
-                Invoke(nameof(makeVincible), _currentSettings.Recovery);
+
+                if (_hp <= 0)
+                    die();
+                else
+                {
+                    makeInvincible();
+                    Invoke(nameof(makeVincible), _currentSettings.Recovery);
+                }
             }
 
-            if (_hp <= 0)
-                die();
         }
         bool _isInvincible;
 
@@ -96,6 +100,12 @@ namespace Project
             Invoke(nameof(removeImmobility), _currentSettings.ImmobilityDuration);
 
             _rigidbody.AddForce(force, ForceMode.Impulse);
+            Invoke(nameof(stopHitEffect), _currentSettings.ImmobilityDuration);
+        }
+
+        void stopHitEffect()
+        {
+            _rigidbody.velocity = Vector3.zero;
         }
 
         public void GetStunned()
@@ -109,11 +119,13 @@ namespace Project
         public int PlayerID { get; set; }
 
         public Sprite Sprite; // can't be a property, because it needs to show up in the inspector.
-        public Sprite CharacterSprite; 
+        public Sprite CharacterSprite;
         public Color Color;
 
         public void Restart()
         {
+
+            _isDead = false;
             _hp = 3;
             gameObject.SetActive(true);
             foreach (var hp in hps)
@@ -204,11 +216,14 @@ namespace Project
 
         void die()
         {
+            _isDead = true;
             _soundManager.PlayAudioClip(_deathAudioClip);
-            _animator.SetBool("isDead", true);
+            _animator.SetTrigger("isDead");
+            _rigidbody.velocity = Vector3.zero;
             Invoke(nameof(dieOverTime), deadTime);
         }
         float deadTime = 3.0f;
+        bool _isDead;
 
         void dieOverTime()
         {

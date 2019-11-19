@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrelBreak: {fileID: 2031963833322993617}
-  _dust: {fileID: 671692789013012907, guid: d77d13e9e2d0b6a4d869e75d79be584a, type: 3}
+  _dust: {fileID: 3562280058209397951}
   _rend: {fileID: 703672922144552101}
   _speed: 10
 --- !u!136 &3088379327092757888
@@ -112,6 +112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dust_Walk
+      objectReference: {fileID: 0}
+    - target: {fileID: 671692789013012907, guid: d77d13e9e2d0b6a4d869e75d79be584a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 671692789013012902, guid: d77d13e9e2d0b6a4d869e75d79be584a,
         type: 3}
@@ -176,6 +181,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4052562222449724694}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &3562280058209397951 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 671692789013012905, guid: d77d13e9e2d0b6a4d869e75d79be584a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4052562222449724694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5377330583576074138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +203,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238296905643532363, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238296905643532363, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6238296905643532362, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
         type: 3}
@@ -262,16 +283,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6238296905643532363, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6238296905643532363, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
-        type: 3}
-      propertyPath: startDelay.scalar
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e4ab1dbcf899f46a7518e16fe03a06, type: 3}
