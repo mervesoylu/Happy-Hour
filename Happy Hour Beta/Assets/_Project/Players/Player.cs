@@ -7,7 +7,7 @@ namespace Project
     public class Player : ScriptableObject
     {
         public XboxController Controller;
-        public Color Color;
+        [HideInInspector] public Color Color;
         [HideInInspector] public Sprite Sprite;
         [HideInInspector] public Sprite CharacterSprites;
         [HideInInspector] public int Score;

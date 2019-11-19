@@ -3,12 +3,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 namespace Project
 {
+
+
     public class BoardController : MonoBehaviour
     {
         #region ------------------------------dependencies
         [SerializeField] List<Image> _playerImages;
+        [SerializeField] List<PointBarController> _pointbarContoller;
         #endregion
 
         #region ------------------------------interface
@@ -17,7 +21,7 @@ namespace Project
             for (int i = 0; i < players.Count; i++)
             {
                 _playerImages[i].sprite = players[i].CharacterSprites;
-                _playerImages[i].GetComponentInChildren<TextMeshProUGUI>().text = players[i].Score.ToString();
+                _pointbarContoller[i].DisplayBar(players[i]);
             }
 
             gameObject.SetActive(true);
@@ -28,5 +32,9 @@ namespace Project
             gameObject.SetActive(false);
         }
         #endregion
+        void Start()
+        {
+            Hide();
+        }
     }
 }
