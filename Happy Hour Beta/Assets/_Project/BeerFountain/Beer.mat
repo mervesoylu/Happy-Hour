@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Beer
+  m_Shader: {fileID: 4800000, guid: 68bc2432bbbcd2242a364351bff0ed71, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_27BC4AAA: 0.568
+    - Vector1_43C9EAC8: 0.33
+    - Vector1_57907FE5: 0
+    - Vector1_6ACE8EDB: 2.56
+    - Vector1_7150A5F4: 0
+    - Vector1_73A40087: 3.12
+    - Vector1_7AAA035D: 0
+    - Vector1_97A11202: 0
+    - Vector1_D73C0A8F: 0.76
+    - Vector1_F831B828: 0
+    - Vector1_FD431D7F: 20
+    m_Colors:
+    - Color_95E9B1B2: {r: 0, g: 0, b: 0, a: 0}
+    - Color_C58A696F: {r: 1, g: 1, b: 1, a: 0}
+    - Color_D1A5DB60: {r: 1, g: 0.29260907, b: 0, a: 0}
+    - Color_E305BE81: {r: 1, g: 0.93021566, b: 0.7877358, a: 0}
+    - Vector2_210E9BAA: {r: 0, g: 50, b: 0, a: 0}
+    - Vector2_B378EAEA: {r: 0, g: 1, b: 0, a: 0}
+    - Vector2_BC79229: {r: 0, g: 1, b: 0, a: 0}
+    - Vector2_E5A2FB0A: {r: 0, g: 1, b: 0, a: 0}
