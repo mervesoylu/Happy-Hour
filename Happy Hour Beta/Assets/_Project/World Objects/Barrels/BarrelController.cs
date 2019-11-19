@@ -6,12 +6,16 @@ public class BarrelController : MonoBehaviour
 {
     #region ----------------------------dependencies
     Rigidbody _rigidbody;
+    [SerializeField] ParticleSystem _barrelBreak;
+    [SerializeField] GameObject _dust;
+    public Renderer _rend;
     #endregion
 
     #region ----------------------------interfaces
     public void Roll(Vector3 direction)
     {
         _rigidbody.AddForce(direction * _speed, ForceMode.VelocityChange);
+        _dust.SetActive(true);
     }
     #endregion
 
@@ -34,8 +38,20 @@ public class BarrelController : MonoBehaviour
             return;
 
         if (other.CompareTag("Character"))
+        {
             other.GetComponent<Project.CharacterController>().TakeDamage();
+           // GameObject barrelBreak = Instantiate(_barrelBreak, position, Quaternion.identity);
+        }
 
+        _rend.enabled = false;
+
+        Invoke(nameof(Break), _break);
+    }
+    float _break = 2.0f;
+
+
+    void Break()
+    {
         Destroy(gameObject);
     }
     #endregion

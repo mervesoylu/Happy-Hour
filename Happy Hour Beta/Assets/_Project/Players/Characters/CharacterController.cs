@@ -15,6 +15,7 @@ namespace Project
         [Inject] SoundManager _soundManager;
         [SerializeField] AudioClip _deathAudioClip;
         [SerializeField] Animator _animator;
+        [SerializeField] GameObject _dust;
 
         public List<GameObject> hps;
         Rigidbody _rigidbody;
@@ -29,6 +30,8 @@ namespace Project
 
             var velocity = direction * _currentSettings.Speed;
             _rigidbody.velocity = velocity;
+
+            _dust.SetActive(true);
         }
 
         public void Aim(Vector3 direction)
@@ -157,6 +160,7 @@ namespace Project
         {
             if (_rigidbody.velocity == Vector3.zero)
             {
+                _dust.SetActive(false);
                 _animator.SetFloat("Horizontal", 0);
                 _animator.SetFloat("Vertical", 0);
                 return;
