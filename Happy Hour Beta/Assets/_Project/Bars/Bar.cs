@@ -36,10 +36,12 @@ public class Bar : MonoBehaviour
 
     public void OnHappyHourRan()
     {
-        _happyAnimationAnimation.Play();
+        _happyHourAnimation.Play();
+        _beerFountainAnimation.Play();
         _bartenderAnimator.SetTrigger("slam");
     }
-    [SerializeField] Animation _happyAnimationAnimation;
+    [SerializeField] Animation _happyHourAnimation;
+    [SerializeField] Animation _beerFountainAnimation;
     [SerializeField] Animator _bartenderAnimator;
     #endregion
 
