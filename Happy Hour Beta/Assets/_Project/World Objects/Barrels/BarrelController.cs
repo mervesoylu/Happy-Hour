@@ -25,7 +25,6 @@ public class BarrelController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _transform = transform;
         _barrelBreak.Stop();
-        _barrelBreak = GetComponent<ParticleSystem>();
     }
 
     private void OnTriggerEnter(Collider other)
