@@ -24,6 +24,8 @@ public class BarrelController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _transform = transform;
+        _barrelBreak.Stop();
+        _barrelBreak = GetComponent<ParticleSystem>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,11 +42,11 @@ public class BarrelController : MonoBehaviour
         if (other.CompareTag("Character"))
         {
             other.GetComponent<Project.CharacterController>().TakeDamage();
-           // GameObject barrelBreak = Instantiate(_barrelBreak, position, Quaternion.identity);
+            _barrelBreak.Play();
         }
 
         _rend.enabled = false;
-
+        _barrelBreak.Play();
         Invoke(nameof(Break), _break);
     }
     float _break = 2.0f;

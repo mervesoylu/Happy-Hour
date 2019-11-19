@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece9ff0633587dd46bff269989d31bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _barrelBreak: {fileID: 2031963833322993619}
+  _barrelBreak: {fileID: 2031963833322993617}
   _dust: {fileID: 671692789013012907, guid: d77d13e9e2d0b6a4d869e75d79be584a, type: 3}
   _rend: {fileID: 703672922144552101}
   _speed: 10
@@ -275,15 +275,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e4ab1dbcf899f46a7518e16fe03a06, type: 3}
---- !u!1 &2031963833322993619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6238296905643532361, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
-    type: 3}
-  m_PrefabInstance: {fileID: 5377330583576074138}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2031963833322993616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6238296905643532362, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
+    type: 3}
+  m_PrefabInstance: {fileID: 5377330583576074138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2031963833322993617 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6238296905643532363, guid: 83e4ab1dbcf899f46a7518e16fe03a06,
     type: 3}
   m_PrefabInstance: {fileID: 5377330583576074138}
   m_PrefabAsset: {fileID: 0}
@@ -294,6 +294,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5237057516979761547}
     m_Modifications:
+    - target: {fileID: 6072101354523817366, guid: 810dc0ec8603f364f9586d0975f12a77,
+        type: 3}
+      propertyPath: m_Name
+      value: RollingBarrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072101354523817366, guid: 810dc0ec8603f364f9586d0975f12a77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072101354525813590, guid: 810dc0ec8603f364f9586d0975f12a77,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6072101354523388342, guid: 810dc0ec8603f364f9586d0975f12a77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -348,21 +363,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6072101354523817366, guid: 810dc0ec8603f364f9586d0975f12a77,
-        type: 3}
-      propertyPath: m_Name
-      value: RollingBarrel
-      objectReference: {fileID: 0}
-    - target: {fileID: 6072101354523817366, guid: 810dc0ec8603f364f9586d0975f12a77,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6072101354525813590, guid: 810dc0ec8603f364f9586d0975f12a77,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810dc0ec8603f364f9586d0975f12a77, type: 3}
