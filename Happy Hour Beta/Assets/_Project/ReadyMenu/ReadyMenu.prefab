@@ -1719,6 +1719,7 @@ MonoBehaviour:
   - {fileID: 2416597224892023016}
   - {fileID: 2428415507965773886}
   - {fileID: 8839261618281014462}
+  _readyAudioClip: {fileID: 8300000, guid: 88ba118a101de954086470e645df3f75, type: 3}
 --- !u!1 &8456505533466777120
 GameObject:
   m_ObjectHideFlags: 0

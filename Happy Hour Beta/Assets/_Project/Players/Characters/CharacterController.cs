@@ -14,6 +14,7 @@ namespace Project
         [Inject] Round _round;
         [Inject] SoundManager _soundManager;
         [SerializeField] AudioClip _deathAudioClip;
+        [SerializeField] AudioClip _hitAudioClip;
         [SerializeField] Animator _animator;
         [SerializeField] GameObject _dust;
 
@@ -78,6 +79,7 @@ namespace Project
             {
                 _hp--;
                 hps[_hp].SetActive(false);
+                _soundManager.PlayAudioClip(_hitAudioClip);
 
                 if (_hp <= 0)
                     die();

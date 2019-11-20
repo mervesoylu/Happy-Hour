@@ -1,41 +1,49 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Zenject; 
 
-public class ReadyMenuController : MonoBehaviour
+
+namespace Project
 {
-    [SerializeField] Color _defaultColor;
-    [SerializeField] Color _highlightedColor;
-    [SerializeField] Image[] _characterFrames;
-    [SerializeField] Image[] _characterNames;
-
-    public void Ready(int controllerID)
+    public class ReadyMenuController : MonoBehaviour
     {
-        if (controllerID < 1 || controllerID > 4)
+        [Inject] SoundManager _soundManager;
+        [SerializeField] Color _defaultColor;
+        [SerializeField] Color _highlightedColor;
+        [SerializeField] Image[] _characterFrames;
+        [SerializeField] Image[] _characterNames;
+        [SerializeField] AudioClip _readyAudioClip;
+
+        public void Ready(int controllerID)
         {
-            Debug.LogError("Invalid controller ID!");
-            return;
+            if (controllerID < 1 || controllerID > 4)
+            {
+                Debug.LogError("Invalid controller ID!");
+                return;
+            }
+
+            _characterFrames[controllerID - 1].color = _highlightedColor;
+            _characterNames[controllerID - 1].color = _highlightedColor;
+            _soundManager.PlayAudioClip(_readyAudioClip);
         }
 
-        _characterFrames[controllerID - 1].color = _highlightedColor;
-        _characterNames[controllerID - 1].color = _highlightedColor;
-    }
-
-    public void ResetUI()
-    {
-        for (int i = 0; i < 4; i++)
+        public void ResetUI()
         {
-            _characterFrames[i].color = _defaultColor;
-            _characterNames[i].color = _defaultColor;
+            for (int i = 0; i < 4; i++)
+            {
+                _characterFrames[i].color = _defaultColor;
+                _characterNames[i].color = _defaultColor;
+            }
         }
-    }
 
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
 
-    public void Hide()
-    {
-        gameObject.SetActive(false);
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
