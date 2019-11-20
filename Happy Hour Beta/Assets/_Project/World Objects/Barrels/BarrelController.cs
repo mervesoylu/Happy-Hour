@@ -40,7 +40,9 @@ public class BarrelController : MonoBehaviour
 
         if (other.CompareTag("Character"))
         {
-            other.GetComponent<Project.CharacterController>().TakeDamage();
+            var character = other.GetComponent<Project.CharacterController>();
+            character.HitEffect(_rigidbody.velocity.normalized * _knockbackForce);
+            character.TakeDamage();
             _barrelBreak.Play();
             _dust.Stop();
         }
@@ -48,12 +50,13 @@ public class BarrelController : MonoBehaviour
         _rend.enabled = false;
         _dust.Stop();
         _barrelBreak.Play();
-        Invoke(nameof(Break), _break);
+        Invoke(nameof(break_), _breakAnimationDuration);
     }
-    float _break = 2.0f;
+    float _breakAnimationDuration = 2.0f;
+    [SerializeField] float _knockbackForce;
 
 
-    void Break()
+    void break_()
     {
         Destroy(gameObject);
     }

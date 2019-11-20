@@ -86,6 +86,7 @@ MonoBehaviour:
   _barrelBreak: {fileID: 2031963833322993617}
   _dust: {fileID: 3562280058209397951}
   _rend: {fileID: 703672922144552101}
+  _knockbackForce: 10
   _speed: 10
 --- !u!136 &3088379327092757888
 CapsuleCollider:
