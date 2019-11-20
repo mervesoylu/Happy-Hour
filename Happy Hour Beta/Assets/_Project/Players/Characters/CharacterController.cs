@@ -51,7 +51,7 @@ namespace Project
             if (_isImmobilised || _isDead)
                 return;
 
-            StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, Quaternion.identity);
+            StraightBottleController bottle = Instantiate(_currentSettings.StraightBottle, _transform.position, _transform.rotation);
             bottle.Fly(deviateDirection(_facing), _colliders);
             _animator.SetTrigger("isSThrow");
         }

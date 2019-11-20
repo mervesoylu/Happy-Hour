@@ -33,7 +33,6 @@ namespace Project
         public override void OnStateExit()
         {
             _scoreMonitor.Hide();
-            Debug.Log("Exiting Ingame State");
         }
     }
 }

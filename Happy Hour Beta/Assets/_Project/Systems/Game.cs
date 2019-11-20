@@ -38,6 +38,7 @@ namespace Project
         /// </summary>
         public void OnRoundFinished(int winnerPlayerNumber)
         {
+            Debug.Log($"Round finished {Time.time}");
             _players
                 .Find(p => (int)p.Controller == winnerPlayerNumber)
                 .Score++;
