@@ -9,6 +9,7 @@ public class BarrelController : MonoBehaviour
     [SerializeField] ParticleSystem _barrelBreak;
     [SerializeField] ParticleSystem _dust;
     public Renderer _rend;
+    public Collider _collider;
     #endregion
 
     #region ----------------------------interfaces
@@ -48,6 +49,7 @@ public class BarrelController : MonoBehaviour
         }
 
         _rend.enabled = false;
+        _collider.enabled = false;
         _dust.Stop();
         _barrelBreak.Play();
         Invoke(nameof(break_), _breakAnimationDuration);

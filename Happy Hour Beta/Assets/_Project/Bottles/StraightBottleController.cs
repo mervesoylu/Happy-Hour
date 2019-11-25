@@ -11,7 +11,10 @@ namespace Project
         Transform _transform;
         [SerializeField] AudioClip _flyAudioClip;
         [SerializeField] AudioClip _hitAudioClip;
+        [SerializeField] ParticleSystem _bottleBreak;
         [Inject] SoundManager _soundManager;
+        public Renderer _rend;
+        public Collider _collider;
         #endregion
 
         #region ------------------------------interfaces
@@ -43,11 +46,21 @@ namespace Project
                     CharacterController character = other.GetComponent<CharacterController>();
                     character.HitEffect(_rigidbody.velocity.normalized * _knockbackForce);
                     character.TakeDamage();
+                    _bottleBreak.Play();
                 }
 
+                _rend.enabled = false;
+                _collider.enabled = false;
                 _soundManager.PlayAudioClip(_hitAudioClip);
-                Destroy(gameObject);
+                _bottleBreak.Play();
+                Invoke(nameof(break_), _breakAnimationDuration);
             }
+        }
+        float _breakAnimationDuration = 0.1f;
+
+        void break_()
+        {
+            Destroy(gameObject);
         }
         #endregion
 
