@@ -8,14 +8,14 @@ namespace Project
 {
     public class EndgameMenuController : MonoBehaviour
     {
-        [SerializeField] List<Image> _winnerID;
+        [SerializeField] Image _winnerID;
+        [SerializeField] Image _winnerImage;
 
-        public void Show(List<Player> winner)
+        public void Show(Player winner)
         {
-            for (int i = 0; i < winner.Count; i++)
-            {
-                _winnerID[i].sprite = winner[i].CharacterSprites;
-            }
+             _winnerID.sprite = winner.VictorySprites;
+             _winnerImage.sprite = winner.CharacterSprites;
+            
             gameObject.SetActive(true);
         }
 
@@ -27,11 +27,6 @@ namespace Project
         void Start()
         {
             Hide();
-        }
-
-        internal void Show(Player winner)
-        {
-            throw new NotImplementedException();
         }
     }
 }
