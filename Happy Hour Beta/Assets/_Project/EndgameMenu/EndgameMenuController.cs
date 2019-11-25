@@ -1,23 +1,37 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using System;
+using System.Collections.Generic;
 
 namespace Project
 {
     public class EndgameMenuController : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI _winnerID;
+        [SerializeField] List<Image> _winnerID;
 
-        public void Show(Player winner)
+        public void Show(List<Player> winner)
         {
-            _winnerID.text = string.Format("{0} Player", winner.Controller);
-            _winnerID.color = new Color(winner.Color.r, winner.Color.g, winner.Color.b, 1f);
+            for (int i = 0; i < winner.Count; i++)
+            {
+                _winnerID[i].sprite = winner[i].CharacterSprites;
+            }
             gameObject.SetActive(true);
         }
 
         public void Hide()
         {
             gameObject.SetActive(false);
+        }
+
+        void Start()
+        {
+            Hide();
+        }
+
+        internal void Show(Player winner)
+        {
+            throw new NotImplementedException();
         }
     }
 }
