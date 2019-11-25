@@ -626,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388765125814304692}
   - component: {fileID: 1161318366}
-  - component: {fileID: 932331517}
+  - component: {fileID: 752259072908853575}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -668,7 +668,7 @@ MonoBehaviour:
   _mainMenuPanel: {fileID: 388765124551163824}
   _controlsPanel: {fileID: 390473141}
   _creditsPanel: {fileID: 770606319}
---- !u!114 &932331517
+--- !u!114 &752259072908853575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
