@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Zenject; 
-
+using Zenject;
+using System.Collections.Generic;
 
 namespace Project
 {
@@ -11,6 +11,7 @@ namespace Project
         [SerializeField] Color _defaultColor;
         [SerializeField] Color _highlightedColor;
         [SerializeField] Image[] _characterFrames;
+        [SerializeField] Image[] _characterSprites;
         [SerializeField] Image[] _characterNames;
         [SerializeField] AudioClip _readyAudioClip;
 
@@ -36,8 +37,12 @@ namespace Project
             }
         }
 
-        public void Show()
+        public void Show(List<Player> players)
         {
+            for (int i = 0; i < players.Count; i++)
+            {
+                _characterSprites[i].sprite = players[i].PlayerSprites;
+            }
             gameObject.SetActive(true);
         }
 

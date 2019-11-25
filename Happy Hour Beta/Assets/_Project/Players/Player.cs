@@ -10,6 +10,8 @@ namespace Project
         [HideInInspector] public Color Color;
         [HideInInspector] public Sprite Sprite;
         [HideInInspector] public Sprite CharacterSprites;
+        [HideInInspector] public Sprite PlayerSprites;
+        [HideInInspector] public Sprite VictorySprites;
         [HideInInspector] public int Score;
     } 
 }

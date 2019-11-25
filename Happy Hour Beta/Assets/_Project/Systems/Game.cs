@@ -68,7 +68,7 @@ namespace Project
         public void Initialize()
         {
             _ingameState = new IngameState(this, _players, _scoreMoniter);
-            _readyUpState = new ReadyUpState(this, _ingameState, _readyUpMenu, _readiedControllers);
+            _readyUpState = new ReadyUpState(this, _ingameState, _readyUpMenu, _readiedControllers, _players);
             _eofRoundState = new EOFRoundState(this, _ingameState, _players, _board);
             _eofGameState = new EOFGameState(this, _readyUpState, _endgameMenu);
 
@@ -100,6 +100,8 @@ namespace Project
                 _characters[i].GetComponent<CharacterController>().PlayerID = (int)_players[i].Controller;
                 _players[i].Sprite = _characters[i].GetComponent<CharacterController>().Sprite;
                 _players[i].CharacterSprites = _characters[i].GetComponent<CharacterController>().CharacterSprite;
+                _players[i].PlayerSprites = _characters[i].GetComponent<CharacterController>().PlayerSprite;
+                _players[i].VictorySprites = _characters[i].GetComponent<CharacterController>().VictorySprite;
                 _players[i].Color = _characters[i].GetComponent<CharacterController>().Color;
                 _players[i].Score = 0;
             }

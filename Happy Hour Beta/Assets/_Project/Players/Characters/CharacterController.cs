@@ -122,6 +122,8 @@ namespace Project
 
         public Sprite Sprite; // can't be a property, because it needs to show up in the inspector.
         public Sprite CharacterSprite;
+        public Sprite PlayerSprite;
+        public Sprite VictorySprite;
         public Color Color;
 
         public void Restart()

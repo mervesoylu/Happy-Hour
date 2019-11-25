@@ -11,13 +11,15 @@ namespace Project
         GameState _ingameState;
         ReadyMenuController _readyUpMenu;
         HashSet<int> _readiedControllers;
+        List<Player> _players;
 
-        public ReadyUpState(Game game, GameState ingameState, ReadyMenuController readyUpMenu, HashSet<int> readiedControllers)
+        public ReadyUpState(Game game, GameState ingameState, ReadyMenuController readyUpMenu, HashSet<int> readiedControllers, List<Player> players)
         {
             _game = game;
             _ingameState = ingameState;
             _readyUpMenu = readyUpMenu;
             _readiedControllers = readiedControllers;
+            _players = players;
         }
 
         public override void OnStateEnter()
@@ -25,7 +27,7 @@ namespace Project
             _game.Setup();
             _readiedControllers.Clear();
             _readyUpMenu.ResetUI();
-            _readyUpMenu.Show();
+            _readyUpMenu.Show(_players);
         }
 
         public override void OnStateUpdate()
