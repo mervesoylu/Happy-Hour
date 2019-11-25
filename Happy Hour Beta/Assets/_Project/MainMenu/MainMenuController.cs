@@ -42,11 +42,14 @@ public class MainMenuController : MonoBehaviour
 
     void Update()
     {
-        if (XCI.GetButtonDown(XboxButton.B))
+        for (int i = 1; i < 5; i++)
         {
-            _mainMenuPanel.SetActive(true);
-            _controlsPanel.SetActive(false);
-            _creditsPanel.SetActive(false);
+            if (XCI.GetButtonDown(XboxButton.B, (XboxController)i))
+            {
+                _mainMenuPanel.SetActive(true);
+                _controlsPanel.SetActive(false);
+                _creditsPanel.SetActive(false);
+            }
         }
     }
 }
